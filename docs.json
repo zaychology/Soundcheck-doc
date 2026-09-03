@@ -18,8 +18,8 @@
     }]
   },
   "navbar": {
-    "links": [{ "label": "GitHub", "href": "https://github.com/zaychology/Soundcheck" }],
-    "primary": { "type": "button", "label": "Add Soundcheck", "href": "https://discord.com/oauth2/authorize" }
+    "links": [{ "label": "Support server", "href": "https://discord.gg/Yqyh7pVzne" }],
+    "primary": { "type": "button", "label": "Add Soundcheck", "href": "https://discord.com/oauth2/authorize?client_id=1462885866144923658&permissions=8&scope=bot+applications.commands" }
   },
-  "footer": { "socials": { "github": "https://github.com/zaychology/Soundcheck" } }
+  "footer": { "socials": { "discord": "https://discord.gg/Yqyh7pVzne" } }
 }
