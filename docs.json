@@ -3,7 +3,7 @@
   "theme": "mint",
   "name": "Soundcheck",
   "colors": { "primary": "#6D28D9", "light": "#8B5CF6", "dark": "#4C1D95" },
-  "favicon": "/favicon.svg",
+  "favicon": "/favicon.png",
   "navigation": {
     "tabs": [{
       "tab": "Documentation",
