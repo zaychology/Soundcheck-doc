@@ -1,0 +1,142 @@
+{
+  "projectType": "saas",
+  "projectName": "Soundcheck",
+  "projectDescription": "Soundcheck is the live event operations platform for bands, production companies, and crews — handling everything from scheduling and crew staffing to setlists, contracts, payments, and CRM in one unified workspace.",
+  "theme": "luma",
+  "primaryColor": "#7C3AED",
+  "lightColor": "#A78BFA",
+  "darkColor": "#5B21B6",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "getting-started/overview",
+              "getting-started/signup",
+              "getting-started/key-concepts",
+              "getting-started/first-7-days"
+            ]
+          },
+          {
+            "group": "Gigs",
+            "pages": [
+              "features/gigs/overview",
+              "features/gigs/creating-gigs",
+              "features/gigs/team-building",
+              "features/gigs/run-of-show",
+              "features/gigs/closeout"
+            ]
+          },
+          {
+            "group": "Crew & Availability",
+            "pages": [
+              "features/availability/overview",
+              "features/availability/availability-requests",
+              "features/availability/crew-calendar",
+              "organization/call-lists"
+            ]
+          },
+          {
+            "group": "Setlists & Music",
+            "pages": [
+              "features/setlists/overview",
+              "features/setlists/building-setlists",
+              "features/setlists/song-library"
+            ]
+          },
+          {
+            "group": "Contracts & Payments",
+            "pages": [
+              "features/contracts/overview",
+              "features/payments/overview",
+              "features/client-portal/overview"
+            ]
+          },
+          {
+            "group": "CRM & Leads",
+            "pages": [
+              "crm/overview",
+              "crm/customers",
+              "crm/venues",
+              "crm/leads"
+            ]
+          },
+          {
+            "group": "Integrations",
+            "pages": [
+              "integrations/overview",
+              "integrations/mcp-server",
+              "integrations/quickbooks",
+              "integrations/calendar-sync"
+            ]
+          },
+          {
+            "group": "Organization",
+            "pages": [
+              "organization/setup",
+              "organization/members",
+              "organization/roles-permissions"
+            ]
+          },
+          {
+            "group": "Mobile App",
+            "pages": [
+              "features/mobile/overview",
+              "features/mobile/installation",
+              "features/mobile/offline-and-sync"
+            ]
+          },
+          {
+            "group": "Help & FAQ",
+            "pages": [
+              "faq/overview",
+              "faq/workflows",
+              "faq/troubleshooting",
+              "changelog"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Plans & Billing",
+        "groups": [
+          {
+            "group": "Subscriptions",
+            "pages": [
+              "subscriptions/plans",
+              "subscriptions/feature-comparison",
+              "subscriptions/billing"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Gig management with full lifecycle from Draft to Settled",
+    "Crew staffing with invitations, call lists, and availability tracking",
+    "Drag-and-drop setlist builder with reusable song library",
+    "E-signature contracts with white-label branding",
+    "Crew payments via ACH direct deposit or card",
+    "CRM with customers, venues, sponsors, and lead tracking",
+    "Client portal for branded event experience",
+    "CheckAI assistant and MCP server for AI agent integration",
+    "iOS and Android mobile app with offline support",
+    "Tours for grouping runs of shows with financial roll-ups",
+    "Rounds digest for prioritized open items across all gigs",
+    "Imports from Planning Center, Back On Stage, and Master Tour"
+  ],
+  "publicApiSurface": [
+    "MCP server (Model Context Protocol for AI agents)",
+    "n8n webhook for CRM sync",
+    "Calendar feed subscription (iCal/ICS)",
+    "Portal forms (lead capture, event questionnaires, feedback)",
+    "Universal Event Format (UEF) JSON schema for imports",
+    "QuickBooks Online integration",
+    "HubSpot + Flex pipeline sync"
+  ]
+}

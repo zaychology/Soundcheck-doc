@@ -1,0 +1,186 @@
+---
+title: "Billing and Subscription Management in Soundcheck"
+sidebarTitle: "Billing"
+description: "Manage your Soundcheck subscription: upgrade or downgrade plans, change billing cycles, add seats, update payment methods, and understand what happens if you cancel."
+---
+
+Your Soundcheck subscription controls which features are available to your organization and how many members you can have on your roster. Only the **Owner** can access billing and subscription settings — find them at **Settings → Organization → Billing**.
+
+<Warning>
+  Billing lives at **Settings → Organization → Billing**, not on the personal Settings page. The personal `/settings` page covers appearance only and has no Billing or Organization section.
+</Warning>
+
+---
+
+## Where to manage billing
+
+Open **Settings → Organization → Billing** to:
+
+- View your current plan and billing cycle
+- See your seat usage (members + pending invitations)
+- Upgrade or downgrade your plan
+- Add or remove seats
+- Update your payment method
+- Download invoices and receipts
+- Access the **Manage Subscription** link, which opens the Stripe customer portal
+
+---
+
+## Upgrade your plan
+
+<Steps>
+  <Step title="Open billing settings">
+    Go to **Settings → Organization → Billing**. You'll see your current plan, billing cycle, and next renewal date.
+  </Step>
+  <Step title="Select a new plan">
+    Click **Upgrade** and choose the plan you want: Pro, Team, or Enterprise. A summary of what's included appears before you confirm.
+  </Step>
+  <Step title="Confirm and pay">
+    Review the prorated charge for the remainder of your current billing cycle and confirm. For Enterprise, select **Contact us** to get a custom quote.
+  </Step>
+  <Step title="Start using new features">
+    Your upgrade takes effect immediately. New features — call lists, CRM, CheckAI, white-label branding — are available as soon as checkout completes.
+  </Step>
+</Steps>
+
+<Tip>
+  Upgrades are immediate and prorated. You pay only for the days remaining in your current billing period at the new plan's rate.
+</Tip>
+
+---
+
+## Downgrade your plan
+
+To move to a lower tier, open **Settings → Organization → Billing** and click **Manage Subscription** to open the Stripe customer portal. Select a lower plan and confirm the downgrade.
+
+**What to know:**
+- Downgrades take effect at the **next billing cycle**, not immediately. You retain access to current features until then.
+- Your data is preserved. Features from the higher tier become **read-only** after the downgrade (for example, you can view existing call lists but can't create new ones on Free).
+- If the downgrade puts you over the lower plan's seat limit, existing members stay, but you won't be able to invite new ones until you're back under the cap.
+
+---
+
+## Billing cycles: monthly and annual
+
+Soundcheck offers both **monthly** and **annual** billing:
+
+- **Monthly**: billed each month, cancel anytime with no commitment
+- **Annual**: billed once per year at a discounted rate — a meaningful saving for teams that know they'll be using Soundcheck year-round
+
+Switch between monthly and annual from **Settings → Organization → Billing → Manage Subscription** in the Stripe portal.
+
+---
+
+## Adding seats
+
+Seat limits are set by your plan tier (see [Plans](/subscriptions/plans)). If you're on Team or Pro and need more seats than your plan includes, you have two options:
+
+1. **Upgrade to a higher plan** — more seats come included
+2. **Custom seat limit** — some organizations have a per-org seat limit configured that overrides the plan default. Contact [info@soundchecklive.io](mailto:info@soundchecklive.io) to discuss a custom arrangement
+
+Your Members tab always shows the seat limit that actually applies to you, including any custom overrides.
+
+---
+
+## Payment methods
+
+Soundcheck accepts all major **credit and debit cards** (Visa, Mastercard, American Express) for subscription billing. Payments are processed securely through **Stripe**.
+
+To update your payment method:
+
+1. Go to **Settings → Organization → Billing**
+2. Click **Manage Subscription** to open the Stripe customer portal
+3. Update your card details and save
+
+Receipts are automatically emailed after each payment. You can also download past invoices directly from **Settings → Organization → Billing**.
+
+<Note>
+  Subscription billing (your Soundcheck plan) is separate from **gig payout funding** (paying crew). Payout funding methods are configured at **Settings → Organization → Connections**, not in Billing.
+</Note>
+
+---
+
+## Cancellation
+
+You can cancel your subscription at any time:
+
+1. Go to **Settings → Organization → Billing → Manage Subscription** in the Stripe portal
+2. Select your current plan and choose **Cancel subscription**
+3. Confirm the cancellation
+
+**After cancellation:**
+- Monthly plans: access continues through the end of the current billing period
+- Annual plans: access continues through the end of the paid annual term
+- Your organization is downgraded to the **Free plan** — all your data is preserved
+- Premium features become read-only; you cannot create new ones but can view existing records
+
+**Refunds:** Monthly plans are non-refundable. For annual plans, contact support within 14 days of purchase for refund eligibility.
+
+---
+
+## Subscription vs. gig payouts
+
+It's worth understanding the distinction:
+
+| | Subscription billing | Gig payouts |
+| --- | --- | --- |
+| **What it is** | Payment for your Soundcheck plan | Payments to crew for performing |
+| **Managed at** | Settings → Organization → Billing | Settings → Organization → Connections |
+| **Who manages it** | Owner only | Owner (with finance access) |
+| **Payment method** | Credit/debit card (via Stripe) | Verified bank account or card |
+
+---
+
+## Enterprise pricing
+
+Enterprise plans are custom-quoted based on your team size, feature needs, and support requirements. To get a quote:
+
+- Email [info@soundchecklive.io](mailto:info@soundchecklive.io)
+- Include your organization size, the features you need, and any custom requirements (SSO, dedicated support, custom onboarding)
+
+Enterprise quotes typically include unlimited seats, white-label branding, priority support, and a custom onboarding call with the Soundcheck team.
+
+---
+
+## Frequently asked questions
+
+<AccordionGroup>
+  <Accordion title="Can I upgrade mid-cycle?">
+    Yes. Upgrades are immediate and prorated — you'll be charged only for the days remaining in the current billing period at the new plan's rate.
+  </Accordion>
+
+  <Accordion title="What happens if my payment fails?">
+    Soundcheck notifies you and retries the payment. If payment continues to fail, your subscription may be downgraded to Free after a grace period. Update your payment method promptly at **Settings → Organization → Billing** to avoid interruption.
+  </Accordion>
+
+  <Accordion title="Do all my members need their own subscription?">
+    No. The subscription is per organization. All members get access to whatever features the org's plan includes — they don't pay separately.
+  </Accordion>
+
+  <Accordion title="Is there a limit on the number of gigs?">
+    No. Plans limit **seats** and **features**, not the number of gigs you can create. You can have an unlimited number of gigs on any plan.
+  </Accordion>
+
+  <Accordion title="Will I lose my data if I cancel?">
+    No. Cancelling downgrades you to the Free plan and preserves all your data. Premium features become read-only rather than deleted.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Related guides
+
+<CardGroup cols={2}>
+  <Card title="Plans overview" icon="credit-card" href="/subscriptions/plans">
+    What's included on each plan
+  </Card>
+  <Card title="Feature comparison" icon="table" href="/subscriptions/feature-comparison">
+    Side-by-side feature breakdown
+  </Card>
+  <Card title="Seat limits" icon="users" href="/organization/members#seat-limits-by-plan">
+    How seats work and what counts toward your cap
+  </Card>
+  <Card title="Gig payments" icon="money-check-dollar" href="/features/payments/overview">
+    Paying crew — separate from subscription billing
+  </Card>
+</CardGroup>

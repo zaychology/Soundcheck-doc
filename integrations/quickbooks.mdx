@@ -1,0 +1,82 @@
+---
+title: "Sync Soundcheck Payouts and Income to QuickBooks Online"
+sidebarTitle: "QuickBooks"
+description: "Connect QuickBooks Online to automatically record Soundcheck payouts and income as QuickBooks entries, ready for month-end reconciliation."
+---
+
+Connecting QuickBooks Online to Soundcheck means every payout you send and every payment you collect shows up in your books without manual data entry. Soundcheck's gig ledger — the running record of what each show pays out and takes in — is the source of truth. When you close out a gig, the ledger items sync to QuickBooks as matching purchase and sales-receipt entries, ready for month-end reconciliation.
+
+<Note>
+  QuickBooks sync is a **finance integration** available on plans that include gig finances. If you cannot see or authorize the QuickBooks connection, confirm your role is owner or admin and check your plan. Contact [info@soundchecklive.io](mailto:info@soundchecklive.io) if you need help enabling finance access for your organization.
+</Note>
+
+## What syncs
+
+Soundcheck maps each type of ledger item to the appropriate QuickBooks entry:
+
+| Soundcheck ledger item | QuickBooks entry |
+|---|---|
+| Crew payouts and expenses (money going out) | **Purchase** |
+| Client payments and income (money coming in) | **Sales receipt** |
+
+Every synced entry includes a reference back to its Soundcheck ledger item so you can trace any QuickBooks line to the gig it came from. Soundcheck also imports your QuickBooks chart of accounts during setup so entries land in the right accounts automatically.
+
+When a ledger item is voided in Soundcheck, the matching QuickBooks entry is voided too.
+
+<Info>
+  This is a **reconciliation** sync, not a payment rail. QuickBooks records what happened; actual money movement still runs through Soundcheck's payouts feature. Connecting QuickBooks never changes how or when anyone gets paid.
+</Info>
+
+## Before you start
+
+- You need an **owner or admin** role in the Soundcheck organization.
+- Your Soundcheck plan must include the finance integration.
+- You need a **QuickBooks Online** account with permission to authorize a connected app.
+
+## Connect QuickBooks
+
+<Steps>
+  <Step title="Open Connections">
+    In the Soundcheck web app, go to **Settings → Organization → Connections**. You will see a **QuickBooks** card on this page.
+  </Step>
+  <Step title="Click Connect QuickBooks">
+    On the QuickBooks card, click **Connect QuickBooks**. Soundcheck redirects you to Intuit's secure authorization page.
+  </Step>
+  <Step title="Authorize on Intuit">
+    Sign in to your QuickBooks Online account (if you aren't already signed in), select the company file you want to connect to Soundcheck, and approve accounting access. Intuit returns you to Soundcheck automatically.
+  </Step>
+  <Step title="Confirm the connection">
+    Back on the Connections page, the QuickBooks card displays a green **Connected** badge and the date the connection was established. New ledger activity syncs to QuickBooks automatically from this point on.
+  </Step>
+</Steps>
+
+## Manage the connection
+
+**Check connection status:** the Connections page always shows whether QuickBooks is connected and since when. If the badge is not green, the token may have expired — reconnect to restore the sync.
+
+**Disconnect QuickBooks:** on the QuickBooks card, click **Disconnect** and confirm your choice. Future payouts and income will stop syncing to QuickBooks. Anything already synced stays in QuickBooks untouched, and you can reconnect at any time.
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="I don't see a QuickBooks card on the Connections page">
+    The finance integration may not be enabled for your organization, or your role may not be owner or admin. Confirm your role under **Settings → Team** and contact [info@soundchecklive.io](mailto:info@soundchecklive.io) to check your plan's finance access.
+  </Accordion>
+  <Accordion title="I see the card but cannot complete the connection">
+    Confirm you hold an owner or admin role in the organization and that your QuickBooks Online user has permission to authorize connected apps. If the issue persists, contact support.
+  </Accordion>
+  <Accordion title="A ledger item didn't appear in QuickBooks">
+    Check that the Connections page still shows **Connected**. Tokens can expire, and a lapsed connection pauses sync. Reconnect to resume, then check whether the missing item syncs on the next ledger update. Items sync when they are created; items created during a lapsed connection may need to be re-saved or re-voided to trigger a new sync event.
+  </Accordion>
+</AccordionGroup>
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Payments" icon="money-bill-transfer" href="/features/payments">
+    How crew payouts, bank connections, and payment history work in Soundcheck.
+  </Card>
+  <Card title="Integrations Overview" icon="plug" href="/integrations/overview">
+    Everything else Soundcheck connects to.
+  </Card>
+</CardGroup>

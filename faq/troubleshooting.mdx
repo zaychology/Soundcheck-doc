@@ -1,0 +1,171 @@
+---
+title: "Troubleshooting Common Soundcheck Issues"
+sidebarTitle: "Troubleshooting"
+description: "Fix common Soundcheck problems: sign-in failures, missing notifications, undelivered invitations, payout errors, and mobile app issues — step by step."
+---
+
+Most Soundcheck issues can be resolved quickly with a few targeted steps. Find your issue below, follow the checklist, and reach out to [info@soundchecklive.io](mailto:info@soundchecklive.io) if you're still stuck after trying the fixes.
+
+---
+
+## Sign-in issues
+
+<AccordionGroup>
+  <Accordion title="I forgot my password">
+    1. On the sign-in page, click **Forgot Password**.
+    2. Enter the email address associated with your account and click **Send reset link**.
+    3. Check your inbox for a password reset email from Soundcheck. Check spam if you don't see it.
+    4. Follow the link in the email to set a new password.
+    5. Sign in with your new credentials.
+
+    If the reset email never arrives, add `notifications@soundcheck.live` to your contacts and try again.
+  </Accordion>
+
+  <Accordion title="I can't sign in / my account is locked">
+    1. Verify you're using the correct email address and the same sign-in method you used at signup (email, Google, or Apple).
+    2. Try resetting your password using **Forgot Password**.
+    3. Clear your browser cache and cookies, or try an incognito window.
+    4. Try a different browser.
+    5. If your account was locked after multiple failed attempts, wait 15 minutes before trying again.
+
+    If none of these work, contact support with your email address and a description of the error you're seeing.
+  </Accordion>
+
+  <Accordion title="I'm signed in but I'm in the wrong organization">
+    Your Soundcheck view is scoped to the active organization. Click the organization name in the top of the sidebar to open the organization selector and switch to the right one. All data — gigs, members, settings — follows the active org.
+  </Accordion>
+
+  <Accordion title="I can't find my organization after signing in">
+    1. Check that you're using the email address that was invited to the org.
+    2. Accept any pending organization invitation in your email inbox.
+    3. Confirm the invitation hasn't expired — ask the Owner to resend it if needed.
+    4. If you created a new account at signup instead of joining an existing one, contact support to merge or correct the accounts.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Notifications not arriving
+
+<AccordionGroup>
+  <Accordion title="I'm not receiving email notifications">
+    1. Check your spam or junk folder for emails from `notifications@soundcheck.live`.
+    2. Add that address to your contacts so future emails aren't filtered.
+    3. Verify your email address is correct on your Soundcheck profile.
+    4. Ask an Owner or Admin to review **Settings → Organization → Notifications** to confirm org-wide defaults are set to send email for the engagement types you expect.
+    5. If you've opted out of notifications at the org level, an Admin will need to re-enable them.
+  </Accordion>
+
+  <Accordion title="I'm not receiving push notifications on mobile">
+    1. Open your device **Settings → Soundcheck → Notifications** and confirm notifications are enabled.
+    2. Check that **Do Not Disturb** or Focus mode isn't silencing Soundcheck alerts.
+    3. Confirm your org's notification defaults include push for the event types you care about (**Settings → Organization → Notifications**).
+    4. Log out of the Soundcheck app and sign back in — this re-registers your device for push.
+    5. Uninstall and reinstall the app if the issue persists.
+
+    See [Push notifications](/features/mobile/overview) for the full setup guide.
+  </Accordion>
+
+  <Accordion title="I'm getting too many notifications">
+    Owners and Admins can adjust org-wide defaults at **Settings → Organization → Notifications**. If you want to change your personal notification preferences, go to the **You** tab in the mobile app and adjust your settings there.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Invitation emails not received
+
+<AccordionGroup>
+  <Accordion title="A crew member says they didn't get their invitation email">
+    1. Ask them to check their spam or junk folder for an email from Soundcheck.
+    2. Confirm you entered their email address correctly — even one typo prevents delivery.
+    3. Go to **Settings → Organization → Members**, find the pending invitation, and use **Resend invitation**.
+    4. If the invitation was sent to the wrong address, revoke it (which frees the seat) and send a new one to the correct address.
+
+    <Note>
+      Pending invitations count against your seat limit even if they haven't been accepted. Revoke stale ones to free up seats.
+    </Note>
+  </Accordion>
+
+  <Accordion title="My invitation batch was blocked">
+    Your plan's seat limit was reached. The full batch is rejected — nothing was sent. To proceed:
+
+    1. Review **Settings → Organization → Members** to see your current seat count.
+    2. Revoke any stale pending invitations to free seats.
+    3. Remove members you no longer work with.
+    4. Or upgrade your plan for a higher seat limit.
+
+    Then retry the invitation.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Payout failures
+
+<AccordionGroup>
+  <Accordion title="My bank account isn't verified">
+    Bank accounts go through a verification process before they can fund ACH payouts. Your account shows as **Verified**, **Pending**, or **Unverified** on your profile and in organization payment settings.
+
+    1. If the account shows **Pending**, look for micro-deposit verification emails from Stripe and complete the verification by confirming the two small deposit amounts.
+    2. If the account shows **Unverified**, return to **Settings → Organization → Connections** and re-start the bank verification flow.
+    3. Contact support if the account has been pending for more than 3–5 business days.
+  </Accordion>
+
+  <Accordion title="A payout failed or is stuck in Processing">
+    1. Go to the gig's **Finances** tab and check the payment history for the failed or stuck payout.
+    2. Review the error message on the payment row — it usually tells you the specific reason (e.g., incorrect account details, insufficient funds, or a Stripe Connect issue).
+    3. If the error is on the crew member's side (their Stripe account needs attention), ask them to complete payout onboarding from their profile.
+    4. Once the issue is resolved, retry the payout from the Finances tab.
+
+    ACH payouts typically take 2–5 business days to settle. "Processing" is normal during that window.
+  </Accordion>
+
+  <Accordion title="A crew member isn't eligible for a payout">
+    The payout review screen lists ineligible rows with the reason. Common causes:
+
+    - The member **hasn't completed payout onboarding** (Stripe Connect) — ask them to do so from their profile.
+    - The member **hasn't accepted their invitation** — accepted invites are required to generate a payout record.
+    - The member's bank account is **unverified** on their end.
+
+    Fix the issue shown and the member will become eligible on the next payout run.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Mobile app issues
+
+<AccordionGroup>
+  <Accordion title="The app crashes on startup or freezes">
+    1. Force-quit the app and reopen it: on iOS, swipe up from the bottom and swipe the app away; on Android, use the recent apps button.
+    2. Restart your device.
+    3. Check for an app update in the **App Store** or **Google Play** — crashes are often fixed in the latest version.
+    4. Uninstall and reinstall the app if the issue persists after updating.
+
+    If the crash happens consistently on a specific screen, note the steps and contact support.
+  </Accordion>
+
+  <Accordion title="Data isn't syncing between my phone and the web app">
+    1. Check your internet connection on both devices.
+    2. Pull down to refresh on the mobile app.
+    3. Log out and back in on the device that seems out of sync.
+    4. Confirm you're in the same organization on both devices — data is org-scoped.
+
+    See [Offline and sync](/features/mobile/offline-and-sync) for what's expected to work without a connection.
+  </Accordion>
+
+  <Accordion title="I see fewer tabs on mobile than my bandmates do">
+    That's expected behavior. The **Gigs** tab is always present, but **Mailbox**, **Browse**, and module availability depend on what your organization has enabled. If a module you need is missing, ask an Owner or Admin to enable it for your org, or access it on the web app at [app.soundchecklive.io](https://app.soundchecklive.io).
+  </Accordion>
+
+  <Accordion title="The app says it can't find an update but it's behaving strangely">
+    Open the **App Store** (iOS) or **Google Play** (Android) and search for Soundcheck to confirm you have the latest version installed. Automatic updates can sometimes be delayed. If you're on the current version and still seeing issues, try signing out and back in, then contact support.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Still need help?
+
+Email [info@soundchecklive.io](mailto:info@soundchecklive.io) with a description of the issue, the steps to reproduce it, and any screenshots. Team plan subscribers receive priority support with faster response times.

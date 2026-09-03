@@ -1,0 +1,151 @@
+---
+title: "Subscribe to Your Gig Schedule in Any Calendar App"
+sidebarTitle: "Calendar Sync"
+description: "Generate a private iCal feed URL in Soundcheck and subscribe to your gig schedule from Apple Calendar, Google Calendar, or Outlook."
+---
+
+Soundcheck generates a private calendar feed for your account in the iCal/ICS format. Subscribe once and your gigs appear alongside everything else in your calendar — no manual exports, no copying dates. The feed updates automatically as gigs are added or changed in Soundcheck, so your calendar always reflects the latest schedule. The feed is **read-only**: you cannot create or edit gigs from your calendar app.
+
+## Find your feed URL
+
+<Steps>
+  <Step title="Open Settings">
+    In the Soundcheck web app, click your profile avatar and go to **Settings**.
+  </Step>
+  <Step title="Select Calendar Sync">
+    Under your personal profile settings, select **Calendar sync**.
+  </Step>
+  <Step title="Generate your feed">
+    If no feed exists yet, click **Generate calendar feed**. Your personal subscription link appears.
+  </Step>
+  <Step title="Copy your link">
+    Copy the subscription URL. The page also offers quick-launch buttons for Apple Calendar and Google Calendar if you want a one-click setup.
+  </Step>
+</Steps>
+
+<Warning>
+  Your feed URL contains a private token that acts like a password. Anyone with the link can read the events in your feed. Do not post it publicly. If the URL is accidentally shared, rotate the token (see [Rotating your feed](#rotating-your-feed)) and update your calendar subscriptions with the new URL.
+</Warning>
+
+## Add the feed to your calendar app
+
+<Tabs>
+  <Tab title="Apple Calendar">
+    **Option 1 — One-click (macOS or iOS):**
+
+    On the Calendar sync page in Soundcheck, click **Open in Apple Calendar**. Your device opens Calendar and prompts you to subscribe. Accept the subscription and set how often to auto-refresh (every hour is a good default).
+
+    **Option 2 — Manual subscription:**
+
+    <Steps>
+      <Step title="Copy your webcal URL">
+        From the Calendar sync page, copy the subscription link. Soundcheck provides a `webcal://` URL for Apple Calendar.
+      </Step>
+      <Step title="Open Apple Calendar">
+        On macOS, go to **File → New Calendar Subscription**. On iOS, go to **Settings → Calendar → Accounts → Add Account → Other → Add Subscribed Calendar**.
+      </Step>
+      <Step title="Paste the URL">
+        Paste the `webcal://` URL into the server field and tap **Subscribe**.
+      </Step>
+      <Step title="Configure the subscription">
+        Give the calendar a name (for example, "Soundcheck Gigs"), set the auto-refresh interval, and confirm. Your gigs appear in the calendar immediately.
+      </Step>
+    </Steps>
+
+    <Tip>
+      Set the refresh interval to **every hour** so new gigs and updates appear in Apple Calendar without delay.
+    </Tip>
+  </Tab>
+  <Tab title="Google Calendar">
+    **Option 1 — One-click:**
+
+    On the Calendar sync page in Soundcheck, click **Open in Google Calendar**. Google opens a confirmation dialog — click **Add calendar**. Your gigs appear in Google Calendar under **Other calendars**.
+
+    **Option 2 — Manual subscription:**
+
+    <Steps>
+      <Step title="Copy your feed URL">
+        From the Calendar sync page, copy the subscription link.
+      </Step>
+      <Step title="Open Google Calendar settings">
+        In Google Calendar on the web, click the **+** icon next to **Other calendars** in the left sidebar, then select **From URL**.
+      </Step>
+      <Step title="Paste the URL">
+        Paste your Soundcheck feed URL into the **URL of calendar** field and click **Add calendar**.
+      </Step>
+      <Step title="Done">
+        Google Calendar imports your gigs and begins polling the feed for updates. The new calendar appears under **Other calendars** in the left sidebar.
+      </Step>
+    </Steps>
+
+    <Note>
+      Google Calendar controls how often it refreshes subscribed feeds — typically every 12 to 24 hours. You cannot force an immediate refresh from within Google Calendar. For real-time schedule awareness, use the Soundcheck web or mobile app.
+    </Note>
+  </Tab>
+  <Tab title="Outlook">
+    **Desktop (Windows or Mac):**
+
+    <Steps>
+      <Step title="Copy your feed URL">
+        From the Calendar sync page in Soundcheck, copy the subscription link.
+      </Step>
+      <Step title="Open the Add Calendar dialog">
+        In Outlook, go to your Calendar view. On Windows, select **Add Calendar → From internet**. On Mac, go to **File → New Calendar Subscription**.
+      </Step>
+      <Step title="Paste the URL">
+        Paste your Soundcheck feed URL into the URL field and click **OK** (Windows) or **Subscribe** (Mac).
+      </Step>
+      <Step title="Name the calendar">
+        Give the subscription a name such as "Soundcheck Gigs" and confirm. Your gigs appear in Outlook's calendar view.
+      </Step>
+    </Steps>
+
+    **Outlook on the web (outlook.com or Microsoft 365):**
+
+    <Steps>
+      <Step title="Copy your feed URL">
+        From the Calendar sync page in Soundcheck, copy the subscription link.
+      </Step>
+      <Step title="Open Add calendar">
+        In Outlook on the web, click **Add calendar** in the left sidebar.
+      </Step>
+      <Step title="Select Subscribe from web">
+        Choose **Subscribe from web** in the panel that opens.
+      </Step>
+      <Step title="Paste the URL and subscribe">
+        Paste your Soundcheck feed URL, give the calendar a name, and click **Import**. Your gigs appear in Outlook immediately.
+      </Step>
+    </Steps>
+  </Tab>
+</Tabs>
+
+## Rotating your feed
+
+Rotate your feed token if the URL was shared with the wrong person, you no longer trust a device or app that has the link, or you want to reset external access for any reason.
+
+<Steps>
+  <Step title="Go to Calendar Sync settings">
+    Open **Settings → Calendar sync** in Soundcheck.
+  </Step>
+  <Step title="Rotate the token">
+    Click **Rotate feed token** and confirm. Soundcheck generates a new URL and invalidates the old one immediately.
+  </Step>
+  <Step title="Update your subscriptions">
+    Copy the new URL and update each calendar app where you had the old feed subscribed. Subscriptions using the old URL will stop receiving updates.
+  </Step>
+</Steps>
+
+## What appears in the feed
+
+The feed includes every gig your Soundcheck account can see — any active gig where you are a member or have access through your organization. It reflects the gig's name, date, time, and venue. It is a **gig schedule feed**, not a personal availability feed; your marked availability from Soundcheck does not appear here.
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Integrations Overview" icon="plug" href="/integrations/overview">
+    All the tools and services Soundcheck connects to.
+  </Card>
+  <Card title="Gigs" icon="calendar-days" href="/features/gigs">
+    How to create, manage, and run gigs in Soundcheck.
+  </Card>
+</CardGroup>

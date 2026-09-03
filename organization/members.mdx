@@ -1,0 +1,222 @@
+---
+title: "Add and Manage Your Organization Members"
+sidebarTitle: "Members"
+description: "Invite members by email, understand seat limits by plan, onboard new joiners, override onboarding for experienced crew, and remove members when needed."
+---
+
+Members are everyone on your roster — the owner, admins, gig coordinators, and every performer and crew member you've invited. Managing your roster well keeps your seat count healthy and makes staffing faster, since positions and onboarding data flow directly from member profiles into gig team-building, call lists, and availability checks.
+
+<Note>
+  Only **Owners** and **Admins** can manage organization members. Find the roster at **Settings → Organization → Members**.
+</Note>
+
+---
+
+## Where the roster lives
+
+<Steps>
+  <Step title="Open organization settings">
+    From the sidebar, open **Organization**, then select the **Members** tab.
+  </Step>
+  <Step title="Review the combined list">
+    The list shows **active members** and **pending invitations** together — everyone who counts toward your seat limit in one place.
+  </Step>
+  <Step title="Open a member record">
+    Click any row to expand their profile: role, positions, onboarding status, payout status, and account badges.
+  </Step>
+</Steps>
+
+### Account status badges
+
+Each member row shows a badge telling you whether they can receive in-app or push notifications:
+
+- **No account** — an imported roster row that hasn't been claimed yet
+- **Never signed in** — a Soundcheck account exists, but no login has been recorded
+- **Last signed in …** — the most recent login on record
+- **Password set / OAuth only** — how the member authenticates
+
+---
+
+## Seat limits by plan
+
+Every plan includes a fixed number of **member seats**. Active members *and* pending invitations both count toward the limit — an invitation you've sent but that hasn't been accepted still holds a seat.
+
+| Plan | Member seats | Admin seats |
+| --- | :---: | :---: |
+| **Free** | 5 | 0 |
+| **Pro** | ~15 | 1 |
+| **Team** | ~50 | 5 |
+| **Enterprise** | Unlimited | Unlimited |
+
+<Note>
+  Some organizations have a **custom seat limit** that overrides the plan-tier number above. Your Members tab always shows the limit that actually applies to you.
+</Note>
+
+The Members tab shows a live status line so you know exactly how much headroom you have before inviting:
+
+- **Team plan:** `12/50 users. 2/5 admin seats used.`
+- **Free plan:** `4/5 users. Admin roles require upgrade.`
+
+### What happens at the cap
+
+When inviting would push you past your seat limit, the invite is **blocked before it sends**. You'll see a message like:
+
+> *Pro plan is limited to 15 users. You currently have 15. Please upgrade to Team plan.*
+
+<Warning>
+  Nothing is sent when you're over the cap — the entire batch is rejected, not just the overflow. Free up seats by removing inactive members or revoking stale pending invitations, or upgrade your plan, then try again.
+</Warning>
+
+### Admin seats
+
+Admin is capped separately from member seats. Only the **Owner** can invite someone as Admin or promote a member to Admin. On the Free plan, admin seats aren't included at all. On Pro, you get one admin seat.
+
+---
+
+## Inviting members
+
+The primary way to grow your roster is by invitation.
+
+<Steps>
+  <Step title="Open the invite panel">
+    On the **Members** tab, use the inline invite panel at the top of the list.
+  </Step>
+  <Step title="Enter email addresses">
+    Add one or more addresses (comma-separated). Invalid addresses are flagged before anything sends.
+  </Step>
+  <Step title="Choose a role">
+    Select **Member**, **Gig Coordinator** (if enabled for your org), or **Admin** (Owner only, subject to admin-seat limits).
+  </Step>
+  <Step title="Send the invitation">
+    Each invitee receives an email with a join link. They appear immediately as **pending** and hold a seat until they accept or you revoke the invitation.
+  </Step>
+</Steps>
+
+### Org members vs. external contacts
+
+**Org members** occupy a seat, go through onboarding, and have ongoing access to your organization. **External contacts** (like a one-off sub or a venue contact) can be invited to a specific gig without joining your org — gig invitations don't consume a member seat.
+
+<Card title="Invitations guide" icon="envelope" href="/organization/members">
+  The full draft-vs-sent invitation flow, delivery statuses, and how to resend.
+</Card>
+
+---
+
+## Onboarding new members
+
+When someone accepts an invitation, they move through your organization's onboarding steps. Each member row shows their progress:
+
+| Badge | Meaning |
+| --- | --- |
+| **Not started** | Invitation accepted, no steps completed yet |
+| **In progress** | Some onboarding steps done |
+| **Onboarded** | All steps complete (or manually overridden) |
+
+### The manual-onboarded override
+
+Sometimes a member is ready to work before they've clicked through every step — a long-time collaborator, or someone you onboarded in person. Owners and admins can mark them onboarded directly.
+
+<Steps>
+  <Step title="Open the member record">
+    Expand the member on the **Members** tab.
+  </Step>
+  <Step title="Mark as onboarded">
+    In the **Onboarding** panel, choose **Mark as onboarded**.
+  </Step>
+  <Step title="Remove the override later if needed">
+    The panel shows the date it was marked and a **Remove override** action. Removing it returns the member to their computed onboarding status based on actual step completion.
+  </Step>
+</Steps>
+
+<Note>
+  The override marks the member onboarded without changing their step progress. Their individual step completion is untouched.
+</Note>
+
+---
+
+## Managing individual members
+
+### Changing a role
+
+<Steps>
+  <Step title="Open the member and select their role">
+    Expand the member on the **Members** tab, then choose the new role: Owner, Admin, Gig Coordinator, or Member.
+  </Step>
+  <Step title="Save">
+    Role changes take effect immediately.
+  </Step>
+</Steps>
+
+<Info>
+  Admins cannot change the role of the Owner or other Admins. Only the Owner can promote someone to Admin, and that assignment consumes an admin seat.
+</Info>
+
+### Assigning positions
+
+Members can carry one or more **positions** — the functional roles they fill on gigs (Drums, FOH Engineer, Tour Manager). Owners and admins can assign positions from a member's profile; members can also pick them during onboarding.
+
+<Warning>
+  Saving positions **replaces** the previous set rather than adding to it. Review the full selection before saving.
+</Warning>
+
+### Removing a member
+
+<Steps>
+  <Step title="Open the member and choose Remove">
+    Expand the member on the **Members** tab and select **Remove**. Confirm the removal.
+  </Step>
+  <Step title="Access ends immediately">
+    They lose access right away and their seat is freed. Past gig assignments and contributions remain in your records. They can be re-invited later.
+  </Step>
+</Steps>
+
+---
+
+## Imported members
+
+If you brought your roster in through an import, those members appear in the list like any other. A few things to know:
+
+- Imported members are matched by email, so re-importing the same person updates rather than duplicates them.
+- Positions referenced in the import are matched to your catalog and can be auto-created if they don't exist.
+- Imported people still count toward your seat limit.
+
+---
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="My invitation was blocked">
+    You're at your seat limit. Pending invitations count too. Revoke any stale ones, remove inactive members, or upgrade your plan. See [Seat limits](#seat-limits-by-plan).
+  </Accordion>
+
+  <Accordion title="The Admin role option is greyed out">
+    You've hit your admin-seat limit, or you're signed in as an Admin (only the Owner can grant Admin). Upgrade for more admin seats, or assign **Gig Coordinator** for operational access without consuming an admin seat.
+  </Accordion>
+
+  <Accordion title="A member shows 'Not started' but is already working">
+    Use **Mark as onboarded** on their profile to override onboarding without forcing them through every step.
+  </Accordion>
+
+  <Accordion title="A removed member still appears in the list">
+    Refresh the page. Confirm they aren't sitting in the pending-invitations section under a different email address.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Related guides
+
+<CardGroup cols={2}>
+  <Card title="Invitations" icon="envelope" href="/organization/members">
+    Draft vs. sent invites and delivery status
+  </Card>
+  <Card title="Roles & permissions" icon="user-shield" href="/organization/roles-permissions">
+    What each role can do
+  </Card>
+  <Card title="Organization setup" icon="building" href="/organization/setup">
+    Configure the rest of your org
+  </Card>
+  <Card title="Subscription plans" icon="credit-card" href="/subscriptions/plans">
+    Seats and features by tier
+  </Card>
+</CardGroup>

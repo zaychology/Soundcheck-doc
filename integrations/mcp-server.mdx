@@ -1,0 +1,122 @@
+---
+title: "Connect Your AI Agents to All Soundcheck Data via MCP"
+sidebarTitle: "MCP Server"
+description: "Use the Model Context Protocol to give Claude, Cursor, or any MCP client read and write access to your Soundcheck gigs, crew, and finances."
+---
+
+The Soundcheck MCP server exposes your live-event workspace to AI agents over the [Model Context Protocol](https://modelcontextprotocol.io). Connect Claude Desktop, Claude Code, Cursor, or any MCP-compatible client and interact with your gigs, crew availability, setlists, finances, and CRM in plain language — no app switching required. The server acts strictly as your account: it sees only what your login can see, and every consequential action requires explicit confirmation before anything is written.
+
+<Note>
+  **CheckAI** is Soundcheck's built-in AI assistant — available in-app, on Slack, and via SMS. The MCP server is for **external** AI clients (Claude, Cursor, and other agents) that you connect yourself. Both run on the same underlying tools, so the capabilities described here apply to CheckAI as well.
+</Note>
+
+## What the MCP server does
+
+The Soundcheck MCP server gives your AI agent a live view of your entire operation and the ability to act on it:
+
+- **Read your events** — upcoming gigs, open checklist items, schedules, rosters, and setlists
+- **Check crew availability** — send availability requests, review responses, and fill positions
+- **View finances** — gig ledgers, payout status, and settlement readiness
+- **Run event workflows** — create or duplicate gigs, apply call lists, close out and settle shows
+- **Manage CRM** — venues, customers, sponsors, leads, and inventory
+- **Reach your crew** — preview recipients and send messages or reminders with a confirm-before-send gate
+
+## Supported AI clients
+
+The MCP server works with any client that speaks the Model Context Protocol, including:
+
+- **Claude Desktop** and **Claude Code** (Anthropic)
+- **Cursor**
+- Any other MCP-compatible agent or workflow tool
+
+## Get your MCP connection details
+
+<Steps>
+  <Step title="Open Settings">
+    In the Soundcheck web app, go to **Settings → Organization → Connections**.
+  </Step>
+  <Step title="Find the MCP section">
+    Locate the **MCP Server** card. If MCP access is available for your plan, your organization's MCP server URL and API token will be displayed here.
+  </Step>
+  <Step title="Copy your URL and token">
+    Copy the **MCP server URL** and generate or copy your **API token**. Treat the token like a password — anyone who has it can access your Soundcheck data through the MCP server.
+  </Step>
+</Steps>
+
+<Warning>
+  Keep your API token private. If you believe it has been compromised, return to **Settings → Connections** and rotate it immediately. All active sessions using the old token will be revoked.
+</Warning>
+
+## Add Soundcheck to your AI client
+
+Once you have your server URL and token, add Soundcheck as an MCP server in your AI client's config. Below is the standard configuration format used by Claude Desktop, Claude Code, Cursor, and most MCP-compatible clients:
+
+```json
+{
+  "mcpServers": {
+    "soundcheck": {
+      "url": "https://mcp.soundchecklive.io",
+      "headers": {
+        "Authorization": "Bearer YOUR_API_TOKEN"
+      }
+    }
+  }
+}
+```
+
+Replace `YOUR_API_TOKEN` with the token you copied from Settings. The config file location varies by client:
+
+| Client | Config file |
+|---|---|
+| Claude Desktop | `~/Library/Application Support/Claude/claude_desktop_config.json` (macOS) |
+| Claude Code | `~/.claude.json` or a per-project `.mcp.json` |
+| Cursor | `~/.cursor/mcp.json` or a per-workspace `.cursor/mcp.json` |
+
+After saving the config, restart your client. Verify the connection by checking your client's MCP or connectors settings — Soundcheck should appear as **connected**.
+
+## What your agent can do
+
+Once connected, your agent can handle everyday live-event work described in plain language. Here are some things you can ask:
+
+<AccordionGroup>
+  <Accordion title="Get briefed on your week">
+    "What needs my attention this week?" pulls upcoming shows and everything waiting on you — invitations, crew offers, availability requests — into one answer.
+  </Accordion>
+  <Accordion title="Build and manage gigs">
+    Create or duplicate a gig, attach a venue, add crew members, build a setlist, and draft a call list — all from a single message.
+  </Accordion>
+  <Accordion title="Handle crew availability">
+    Ask your crew's availability for a date range, review who's free, and clear pending offers and invitations from your inbox without leaving chat.
+  </Accordion>
+  <Accordion title="View and close out finances">
+    Check whether a show is ready to settle, read its ledger, mark it complete, and close the books. The agent confirms with you before settling.
+  </Accordion>
+  <Accordion title="Work your CRM">
+    Look up venues, manage customers and sponsors, track leads through the pipeline, and check out inventory to a gig.
+  </Accordion>
+  <Accordion title="Message your crew">
+    Preview who a message will reach, then send a custom note or a standard load-in reminder. The agent always shows you the recipient list and waits for your approval before sending.
+  </Accordion>
+</AccordionGroup>
+
+## Confirmation gates
+
+Consequential actions — sending messages to crew, settling a show, committing an import, archiving a gig, and similar writes — are **gated**. On the first call, the agent does nothing and returns a confirmation prompt with a short-lived token. The action runs only when you confirm. This means a single stray instruction can never message your crew or close your books without your explicit approval.
+
+## Security
+
+- Every request carries your Soundcheck account token. The server validates it on every call and acts only as your account — never as an admin, never on behalf of another user.
+- The server has no privileged credentials beyond your own account permissions.
+- All communication is over HTTPS (TLS required).
+- Rotate your API token from **Settings → Connections** if you suspect it has been exposed.
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="CheckAI" icon="microchip-ai" href="/integrations/mcp-server">
+    The built-in AI assistant available in-app, on Slack, and via SMS — powered by the same MCP tools.
+  </Card>
+  <Card title="Integrations Overview" icon="plug" href="/integrations/overview">
+    Everything Soundcheck connects to.
+  </Card>
+</CardGroup>

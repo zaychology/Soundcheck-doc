@@ -1,0 +1,115 @@
+---
+title: "Crew Calendar: See Who Is Free Before You Staff"
+sidebarTitle: "Crew Calendar"
+description: "Read the shared org-wide availability calendar to spot who's free, who's booked, and who hasn't responded — and staff gigs without double-booking anyone."
+---
+
+The crew calendar gives schedulers a shared, org-wide view of member availability before a single invitation goes out. Instead of opening gig after gig to check who's on what show, you see every member's availability and booking status in one timeline — then staff directly from what you find.
+
+<Warning>
+  The crew calendar is part of the **People** workspace and requires the crew availability feature to be enabled for your organization. If you don't see **Availability → People** in the sidebar, use [personal availability](/features/availability/overview) at `/availability` for your own calendar, and check aggregate response counts on **Org Mailbox → Availability** for a summary of outstanding requests.
+</Warning>
+
+<Info>
+  When enabled, the crew calendar is available to owners, admins, and gig coordinators. Individual members manage their own availability at `/availability` but do not have access to the org-wide calendar view.
+</Info>
+
+## Open the crew calendar
+
+<Steps>
+  <Step title="Go to Availability → People">
+    In the web app, select **Availability** in the main navigation, then choose **People** to open the People workspace.
+  </Step>
+  <Step title="Open the Availability tab">
+    Select the **Availability** tab inside the People workspace. The crew calendar loads on this tab.
+  </Step>
+  <Step title="Choose your view">
+    Switch between **week** and **month** views depending on how much range you need. Use the week timeline for detailed day-by-day scheduling; use the month view to spot broad patterns and busy date clusters across the whole org.
+  </Step>
+</Steps>
+
+## Reading the calendar
+
+Each row in the crew calendar represents one member. The blocks on each row show that member's status for any given date or time range. Here's what the colors and labels mean:
+
+| Block | Meaning |
+|---|---|
+| **Available** | The member marked themselves available for this date or window |
+| **Unavailable** | The member marked themselves unavailable and cannot accept work |
+| **Conflict** | The member has already accepted an invitation or crew offer for a gig at this time |
+| *(No block)* | The member has not marked anything for this date — no standing availability on file |
+
+<Note>
+  A **Conflict** block is derived from accepted offers and invitations, not from simply being listed on a gig's roster. If someone is added to a gig's team but hasn't accepted yet, they do not show as conflicted. Soundcheck only marks someone busy once they have actually committed to a show.
+</Note>
+
+Understanding the difference between "no block" and "Available" is important: the absence of a block means the member hasn't told you anything about that date yet. It doesn't mean they're free — it means you don't know. If you need a definite answer, send an availability request.
+
+## Filter by position
+
+When you're staffing a specific role — say, a sound engineer or a stage manager — use the **position filter** to narrow the calendar down to members who hold that position in your org. This removes the noise of irrelevant rows and lets you compare candidates side by side for the date you're trying to fill.
+
+Position filtering is especially useful when you have a deep roster. Instead of scanning 30 rows to find your three FOH engineers, the filter surfaces exactly the people who matter for that slot.
+
+## Using the calendar to avoid double-booking
+
+Double-booking happens when a scheduler doesn't realize someone has already committed to another show. The crew calendar prevents this because **conflict blocks are automatic**: the moment a member accepts any invitation or crew offer anywhere in your org, that time is marked on the calendar. You don't have to update it manually or remember to check another gig's roster.
+
+Before you open **Manage Team** on a new gig, check the crew calendar for your target date. Anyone showing a conflict block on that date is already committed — route to another candidate or send an availability request to confirm timing overlap.
+
+## The difference between the crew calendar and your personal calendar
+
+The **crew calendar** is an org-wide scheduler tool. It shows everyone in your organization — not just you — and it's designed for people who staff and schedule gigs. You can see other members' availability and booking status, filter by position, and act on what you see to staff a show.
+
+**Your personal calendar** (at `/availability`, or **You → Settings → Availability** on mobile) is your own record of when you're available or unavailable. Only you edit it. It feeds into the crew calendar so schedulers can see your status, but it doesn't show anyone else's data.
+
+If you're a crew member who just needs to mark your own availability, your personal calendar is the right place. If you're a scheduler building a team, start with the crew calendar.
+
+<Tip>
+  Combine the crew calendar with availability requests for the cleanest pre-staffing workflow. Use the calendar to identify who looks free on your target date, then send a targeted availability request to those specific members for an explicit confirm. By the time you open **Manage Team**, you have documented answers — not guesses.
+</Tip>
+
+## Request availability from the calendar
+
+When the calendar shows a member with no block (no standing availability on file) and you need a definite answer before you staff, send an availability request directly.
+
+<Card
+  title="Availability Requests"
+  icon="paper-plane"
+  href="/features/availability/availability-requests"
+>
+  Send a targeted date or time-window request and collect yes/no responses in one place.
+</Card>
+
+## Related pages
+
+<CardGroup cols={2}>
+  <Card
+    title="Personal Availability"
+    icon="user-clock"
+    href="/features/availability/overview"
+  >
+    What individual members manage at `/availability` — the data that feeds this calendar.
+  </Card>
+  <Card
+    title="Availability Requests"
+    icon="paper-plane"
+    href="/features/availability/availability-requests"
+  >
+    Get explicit yes/no responses for a date before you commit to a lineup.
+  </Card>
+  <Card
+    title="Building Teams for Gigs"
+    icon="users"
+    href="/features/gigs/team-building"
+  >
+    Turn what you see on the calendar into a fully staffed gig team.
+  </Card>
+  <Card
+    title="Call Lists"
+    icon="list-check"
+    href="/organization/call-lists"
+  >
+    Apply a saved lineup with backup call order the moment you confirm a date.
+  </Card>
+</CardGroup>

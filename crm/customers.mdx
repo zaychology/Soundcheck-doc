@@ -1,0 +1,119 @@
+---
+title: "Customers: Track Clients and Their Event History"
+sidebarTitle: "Customers"
+description: "Create and manage client records with contacts, gig history, and linked venues — then invite clients to their own branded portal."
+---
+
+A customer record is the single source of truth for every client you work with. It holds their contact information, links to every gig you've run for them, connects to their associated venues, and serves as the entry point for inviting them to your client portal. Instead of searching email threads to remember what you last quoted someone, open their customer record and you'll find everything in one place.
+
+<Info>
+  Customers live under **Business → Customers** in the sidebar and are available on **Team** and **Enterprise** plans. On **Free**, Customers may appear with a lock icon or be hidden entirely. If you don't see the Customers section, [contact support](mailto:info@soundchecklive.io).
+</Info>
+
+## Open the customer directory
+
+Navigate to **Business → Customers** in the sidebar. From there you can search by name, filter by status, or browse your full client list. Select any customer to open their detail page.
+
+Owners, admins, and gig coordinators can create and manage customer records.
+
+## Create a customer record
+
+You can add a customer in two ways:
+
+- **Manually** — open **Business → Customers** and click **New Customer**. Fill in the name, contact details, status, and any notes.
+- **From a lead conversion** — when you [convert a lead](/crm/leads) to a gig, Soundcheck automatically creates a customer record (or reuses an existing one) from the lead's contact information.
+
+<Tip>
+  Use lead conversion whenever possible. Soundcheck links the new customer to the gig and creates a primary contact in one step, so your CRM and booking history are connected from day one.
+</Tip>
+
+## The customer detail page
+
+Each customer's page opens with a quick-stats row showing the count of contacts, linked gigs, venues, and connected integrations. A badge indicates where the record originated:
+
+| Badge | Meaning |
+|---|---|
+| **Synced** | The record is linked to a connected system such as HubSpot. |
+| **Converted Lead** | The customer was created by converting a lead. |
+| **Manual record** | The record was created by hand in Soundcheck. |
+
+The page is organized into tabs:
+
+<CardGroup cols={2}>
+  <Card title="Overview" icon="id-card">
+    Notes, profile fields (email, phone, website), and the **primary contact** — the person you'll invite to the client portal.
+  </Card>
+  <Card title="Events" icon="calendar">
+    The customer's upcoming gig and their full gig history, each entry linking directly to that gig's detail page.
+  </Card>
+  <Card title="Venues" icon="location-dot">
+    Venues associated with this customer, useful for recurring clients who book at the same locations.
+  </Card>
+  <Card title="Integrations" icon="plug">
+    Records this customer is linked to in any connected external systems.
+  </Card>
+</CardGroup>
+
+<Note>
+  A **Forms** tab also appears when portal forms are enabled, showing questionnaires and intake forms assigned to this customer. See [portal forms](/crm/leads) for details.
+</Note>
+
+## What you can edit
+
+Use the **Edit** action to update core details on the customer record:
+
+| Field | Use it for |
+|---|---|
+| Name | The individual's or company's name |
+| Status | A working label such as *active*, *prospect*, or *VIP* |
+| Website | The client's website |
+| Email and phone | Primary booking contact information |
+| Notes | Booking preferences, payment terms, reminders, or anything your team needs to know |
+
+<Note>
+  Fields synced from a connected system (like HubSpot) are read-only in Soundcheck. Automated syncs and manual edits never conflict with each other.
+</Note>
+
+## Attach a customer to a gig
+
+When you convert a lead, the customer link is created automatically. For gigs you create directly, open the gig and navigate to its **Clients** tab to link a customer. Once linked, the gig appears in that customer's Events history and the customer is visible from the gig.
+
+## Invite a customer to the client portal
+
+The client portal gives your customers a branded, secure space to view their events, sign contracts, fill out forms, and check invoices — without logging into your staff workspace. You invite them from their customer record.
+
+<Steps>
+  <Step title="Add a primary contact">
+    On the customer's **Overview** tab, confirm there is a primary contact with a valid email address. This is the person who will receive the portal invitation.
+  </Step>
+  <Step title="Preview the portal">
+    Click **Preview portal** to see exactly what this client will see before you send anything. Check that the right events, contracts, and forms are visible.
+  </Step>
+  <Step title="Send the invitation">
+    Click **Invite to portal**. Soundcheck emails the primary contact a secure link to create their portal sign-in. Their access is scoped to this customer record — they see only their own events and documents.
+  </Step>
+</Steps>
+
+For the full invitation lifecycle, including resending and revoking access, see [inviting clients](/features/client-portal/overview).
+
+## Use customer records in the leads pipeline
+
+When you qualify an inbound lead and it's ready to convert, Soundcheck checks for an existing customer that matches the lead's contact information. If one exists, it reuses that record and adds the new gig to the existing history. If nothing matches, it creates a new customer. This keeps your directory clean without requiring you to manually de-duplicate every new booking.
+
+## Delete a customer
+
+Delete only records you no longer need. If a customer is tied to past gigs, consider updating their status to *inactive* or adding a note instead — that way your team keeps the booking history intact.
+
+## Related pages
+
+<CardGroup cols={3}>
+  <Card title="Client portal" icon="browser" href="/features/client-portal/overview">
+    What clients see when you invite them to the portal.
+  </Card>
+  <Card title="Leads" icon="bullseye" href="/crm/leads">
+    Track booking inquiries before they become customers.
+  </Card>
+  <Card title="Venues" icon="location-dot" href="/crm/venues">
+    Link venues to customer records and gigs.
+  </Card>
+</CardGroup>

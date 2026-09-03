@@ -1,0 +1,103 @@
+---
+title: "Offline Access and Sync in the Soundcheck App"
+sidebarTitle: "Offline & Sync"
+description: "Learn what Soundcheck caches for offline use, how your edits sync when you reconnect, and what to expect when venue Wi-Fi or cell reception is unreliable."
+---
+
+Venues are reliably bad at internet. The Soundcheck mobile app is built to keep working when reception drops between sound check and downbeat. This page explains exactly what's available offline, how sync works when you reconnect, and how to prepare before you lose signal.
+
+---
+
+## You stay signed in
+
+The app keeps your session on the device, so losing signal doesn't sign you out. When you reopen the app underground, backstage, or in a basement green room, you're still logged in and can read whatever's cached. You don't need to reconnect first.
+
+---
+
+## What's cached for offline use
+
+The app caches data you've recently loaded and keeps it for about a week. As long as you opened each of these at least once while connected, you can read them offline:
+
+- **Gig details** for any gig you've recently viewed — venue, call times, schedule, team, and notes
+- **Your gigs list** — the most recently loaded snapshot
+- **Setlists** attached to recently viewed gigs, including any chart attachments you've already opened
+- **Your organizations** and recently loaded invitations
+
+<Tip>
+  Before a show, while you still have signal: open tonight's gig, tap into the setlist, and open any chart PDFs you'll need on stage. Each tap caches that content for offline access.
+</Tip>
+
+---
+
+## What requires a connection
+
+Some actions require a live connection and can't be queued for later:
+
+- Accepting or declining a new invitation, or answering an availability check
+- Sending or receiving chat messages
+- Loading a gig or setlist you've **never opened before**
+- Creating or editing content (gigs, setlists, members)
+- Stripe Connect onboarding or any payment action
+
+---
+
+## How sync works when you reconnect
+
+When your connection comes back, the app reconnects automatically and:
+
+1. **Catches up** notifications and chat messages you missed while offline
+2. **Retries any queued actions** — for example, an invitation accept you tapped while underground
+3. **Refreshes** the gigs list and any other content you open
+
+If a queued action conflicts with a server-side change — for instance, you tried to accept an invitation that was later revoked while you were offline — the app surfaces a one-time alert explaining what happened so you can take the right next step.
+
+---
+
+## When venue Wi-Fi or reception is bad
+
+Patchy reception (loading spinners, failed refreshes) is different from being fully offline. In low-signal conditions:
+
+- **Read-only access works** for anything already cached — tap into your gig and setlist to confirm the cache is warm
+- **Actions may time out** — retries happen automatically, but if something fails repeatedly, wait until you have a stronger signal
+- **Push notifications may arrive late** — you'll get a digest of missed pushes once you reconnect
+
+---
+
+## Sync conflict handling
+
+The Soundcheck app handles sync conflicts automatically in most cases. If you and another team member both make changes to the same gig while one of you is offline, the server-side version wins. You'll see the updated data when the app refreshes.
+
+For time-sensitive actions (invitation responses, availability replies), the app tells you if the item is no longer actionable — for example, if the invitation expired while you were offline — so you're never left guessing.
+
+---
+
+## Known limits
+
+- The app does **not** pre-download full setlist PDFs. Open each chart PDF once while connected to cache it for offline reading.
+- **Push notifications** require a connection to arrive. Missed pushes appear once you reconnect.
+- **Payment flows** (Stripe Connect) require a live connection and will not start offline.
+- **Calendar feed subscriptions** (Apple Calendar, Google Calendar) sync independently of Soundcheck connectivity.
+
+---
+
+## Before the show: a quick checklist
+
+Do this while you still have signal — ideally before you arrive at the venue.
+
+- [ ] Open tonight's gig in the app (caches the gig detail)
+- [ ] Tap into the setlist (caches songs and notes)
+- [ ] Open any chart attachments you'll need on stage (caches each one individually)
+- [ ] Check your Mailbox for any unanswered invitations or availability requests
+
+---
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="Push notifications" icon="bell" href="/features/mobile/overview">
+    Configure which alerts land on your lock screen and troubleshoot silent pushes.
+  </Card>
+  <Card title="Setlists" icon="music" href="/features/setlists/overview">
+    Build setlists that display clearly on a phone screen.
+  </Card>
+</CardGroup>

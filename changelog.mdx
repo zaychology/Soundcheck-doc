@@ -1,0 +1,102 @@
+---
+title: "Soundcheck Changelog: Recent Updates and New Features"
+sidebarTitle: "Changelog"
+description: "Stay up to date with the latest Soundcheck releases — new features, improvements, and fixes across gigs, crew, setlists, AI, payments, and the mobile app."
+---
+
+This changelog covers recent updates to the Soundcheck platform. New releases ship continuously — check back often for what's new.
+
+---
+
+## v2.8 — September 2025
+
+**Rounds digest, CheckAI file ingestion, and QuickBooks sync**
+
+### Rounds
+
+- Launched **Rounds** — a Home-page digest of every open item across all your organization's gigs, bucketed by urgency. Rounds surfaces what needs action **today**, what's due **this week**, and what's worth watching, so nothing slips before doors. Open items include unanswered invitations, unsigned contracts, unpaid payouts, and overdue tasks.
+- Rounds updates in real time as crew respond, contracts get signed, and payouts clear — the bucket counts drop as you work through them.
+- Rounds is available to Owners and Admins on all plans.
+
+### CheckAI — AI file ingestion
+
+- Introduced **CheckAI file ingestion**: drop a contract, call sheet, rider, or email onto a gig and CheckAI extracts the schedule, crew, ledger lines, and leads into reviewable proposals you commit. Nothing writes to your gig until you confirm.
+- Ingestion uses the same **Universal Event Format (UEF)** as the manual importer. The flow is: analyze → review → optional cross-file merge → commit.
+- Supported file types: PDF, DOCX, plain-text email (.eml, .txt), and CSV call sheets.
+- AI file ingestion is available on Team and Enterprise plans. Contact [info@soundchecklive.io](mailto:info@soundchecklive.io) to enable it for your organization.
+
+### QuickBooks sync
+
+- **QuickBooks Online integration** is now generally available. Connect your QuickBooks account from **Settings → Organization → Connections** to automatically sync Soundcheck payouts and gig income for reconciliation.
+- Payouts sent through Soundcheck create corresponding expense entries in QuickBooks. Income from gig records syncs as revenue.
+- Disconnecting preserves all previously synced records in QuickBooks.
+
+### Fixes and improvements
+
+- Gig templates now carry over run-of-show sections and custom fields when duplicated.
+- Availability request expiry now closes the check automatically when the gig date passes.
+- Mobile Mailbox badge count now reflects only open (unanswered) items, not historical ones.
+
+---
+
+## v2.5 — August 2025
+
+**MCP server GA, client portal improvements, and touring lineup management**
+
+### MCP server — generally available
+
+- The **Soundcheck MCP server** is now generally available. Connect Claude, Cursor, or any MCP-compatible AI agent to your Soundcheck data through the Model Context Protocol. Point your client at `mcp.soundchecklive.io` and authenticate with your org credentials.
+- Agents can read gigs, crew, finances, setlists, and CRM data; create and update events; staff positions; and work the org Mailbox — all in plain language.
+- New tools this release: `export_workspace`, `preview_uef_import`, `import_uef` (confirmation-gated), lead pipeline tools (`claim_lead`, `mark_lead_lost`, `convert_lead`), and inventory assign/return.
+- MCP server access is available on Team and Enterprise plans.
+
+### Client portal improvements
+
+- **Client portal** now supports **portal forms**: embed lead intake forms, event questionnaires, and post-show feedback forms. Responses flow directly into the matching customer or event record in your CRM.
+- Clients can now see a full event timeline in their portal — not just contracts and invoices, but the schedule and key milestones as they happen.
+- Portal invitation emails now include a branded header using your organization logo and color settings.
+- **White-label branding** for the portal signing experience is now exclusively available on Enterprise.
+
+### Touring lineup management
+
+- New **Managing a touring lineup** tools make it easier to keep a run of shows staffed when the lineup changes leg to leg. Detect conflicts across dates, rotate subs into specific legs, and use call lists per show.
+- Tour financial roll-ups now include **per-leg breakdowns**: see revenue, payouts, and net for each leg of a tour as well as the full run.
+- Duplicate a gig within a tour to spin up the next date with the same team structure in seconds.
+
+### Fixes and improvements
+
+- Contracts now show a clear DRAFT → SENT → SIGNED/DECLINED status badge on the gig Contracts tab.
+- Fixed an issue where cancelling a multi-day gig left open invitation threads in crew members' Mailboxes.
+- Gig export PDFs now render with branded headers when white-label branding is enabled.
+
+---
+
+## v2.2 — July 2025
+
+**Android offline sync, setlist Spotify import, and gig templates for all**
+
+### Android offline sync improvements
+
+- Overhauled the Android offline sync engine. Gig details, setlists, and recently viewed invitations now cache more reliably on Android, including on older devices running Android 10 and 11.
+- Queued actions (invitation accepts, availability responses) retry more aggressively when the connection is restored after extended offline periods.
+- Fixed an issue where the Android app would occasionally show stale setlist data after reconnecting to a strong signal.
+- The **before-the-show checklist** is now surfaced in the mobile app as a pre-show prompt: tap to cache tonight's gig, setlist, and charts while you still have signal.
+
+### Setlist Spotify import
+
+- **Spotify album import** is now available in the setlist builder. Search for an album by name or Spotify URL, and Soundcheck imports the track list into your song library automatically.
+- Imported songs include title, artist, and track order. You can reorder, add notes, and attach charts after importing.
+- Existing songs in your library are matched by title to avoid duplicates on re-import.
+
+### Gig templates for all plans
+
+- **Save as Template** and the **Templates** tab on the Gigs board are now available on all plans, including Free.
+- Templates preserve gig details, team structure, setlists, run of show, and checklist — everything you'd want to reuse for a recurring show.
+- Deleted templates are remembered so they're not recreated on next sign-in.
+
+### Fixes and improvements
+
+- Call-time notifications now show the gig timezone instead of the viewer's local device timezone.
+- Fixed a display issue on the crew availability calendar where declined offers appeared as available slots.
+- Setlist PDF export now respects custom section ordering.
+- Org Mailbox now shows a **Replies** view listing every person who responded, newest first, including answers on filled or expired requests.

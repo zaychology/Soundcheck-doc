@@ -1,0 +1,161 @@
+---
+title: "Roles and Permissions: Control Who Can Do What"
+sidebarTitle: "Roles & Permissions"
+description: "Understand the four Soundcheck roles — Owner, Admin, Gig Coordinator, and Member — and exactly what each one can see, edit, and manage in your organization."
+---
+
+Every person in your organization has one **role**. That role determines what they can see and do — from managing the subscription all the way down to responding to a gig invitation. Roles are separate from [positions](/organization/setup), which describe the *work* someone does (Drums, FOH Engineer) rather than their *access level*.
+
+Assigning the right role from the start keeps your finances private, your roster tidy, and your gig operations moving without bottlenecks.
+
+---
+
+## The four roles
+
+<CardGroup cols={2}>
+  <Card title="Owner" icon="crown">
+    The account holder. Full control — including billing, the subscription, payments, and the organization itself.
+  </Card>
+  <Card title="Admin" icon="user-gear">
+    Runs day-to-day operations and the roster. Everything except billing, payments, and deleting the org.
+  </Card>
+  <Card title="Gig Coordinator" icon="headset">
+    Handles gigs and scheduling without access to finances or member management.
+  </Card>
+  <Card title="Member" icon="user">
+    Performs and participates. Sees only the gigs they're assigned to and responds to invitations.
+  </Card>
+</CardGroup>
+
+### Owner
+
+The highest level of access — typically the founder or whoever owns the account.
+
+- Manages the **subscription and billing**
+- Controls **payments** and payout funding methods
+- Can **delete the organization** or **transfer ownership**
+- Has every Admin capability on top of the above
+
+### Admin
+
+Full operational and roster control, without billing or payments access.
+
+- Create, edit, publish, and delete gigs
+- Manage setlists, teams, call lists, and availability
+- Invite, onboard, and manage members and their roles (cannot grant Admin)
+- View financial roll-ups and per-gig finances
+- Configure organization settings (positions, branding, onboarding)
+
+Admins cannot touch billing, the subscription, or Payments. They cannot change or remove the Owner or other Admins.
+
+### Gig Coordinator
+
+Operational access to gigs and scheduling, with financial and member controls hidden. A great fit for booking agents, production managers, and crew schedulers who handle logistics but not the books.
+
+<Info>
+  The Gig Coordinator role is available to organizations that have it enabled. If you don't see it as an option when inviting, ask an Owner to turn it on for your org.
+</Info>
+
+- Create, edit, publish, and delete gigs
+- Build teams, send invitations, and send crew offers
+- Manage setlists, call lists, and availability requests
+- **Cannot** see P&L or payouts, manage members, change billing, or edit organization settings
+
+### Member
+
+Participation-level access for performers and crew.
+
+- View the gigs they're assigned to
+- Respond to invitations, crew offers, and availability requests
+- View setlists for their gigs
+- Manage their own profile
+
+---
+
+## Permissions table
+
+Use this table to quickly verify what each role can do before assigning it.
+
+| Action | Owner | Admin | Gig Coordinator | Member |
+| --- | :---: | :---: | :---: | :---: |
+| **Create / edit gigs** | ✓ | ✓ | ✓ | — |
+| **Delete gigs** | ✓ | ✓ | ✓ | — |
+| **Invite crew to a gig** | ✓ | ✓ | ✓ | — |
+| **Send crew offers** | ✓ | ✓ | ✓ | — |
+| **Respond to invitations** | ✓ | ✓ | ✓ | ✓ |
+| **Manage setlists** | ✓ | ✓ | ✓ | Own gigs |
+| **View all gigs** | ✓ | ✓ | ✓ | — |
+| **Send contracts** | ✓ | ✓ | — | — |
+| **View finances / P&L** | ✓ | ✓ | — | — |
+| **Manage payments** | ✓ | — | — | — |
+| **Manage billing** | ✓ | — | — | — |
+| **Invite / manage members** | ✓ | ✓ \* | — | — |
+| **Assign member roles** | ✓ | ✓ \* | — | — |
+| **Manage org settings** | ✓ | ✓ | — | — |
+| **Delete / transfer org** | ✓ | — | — | — |
+
+\* Admins cannot change or remove the Owner or other Admins. Only the Owner can grant or invite as Admin.
+
+---
+
+## Choosing a role
+
+| Person | Recommended role |
+| --- | --- |
+| Founder / account holder | Owner |
+| Band manager / office lead | Admin |
+| Booking agent, production manager | Gig Coordinator |
+| Performer, crew, session sub | Member |
+
+<Tip>
+  Assign **Gig Coordinator** to trusted crew leads who need to staff shows and manage setlists but shouldn't see payouts or billing. It's the ideal middle ground between full Admin access and the limited view of a Member — and it doesn't consume an admin seat.
+</Tip>
+
+---
+
+## Changing a role
+
+<Steps>
+  <Step title="Open the member record">
+    Go to **Settings → Organization → Members** and expand the person's row.
+  </Step>
+  <Step title="Pick the new role">
+    Choose from Owner, Admin, Gig Coordinator, or Member. Only the Owner can assign Admin. Changes take effect immediately.
+  </Step>
+</Steps>
+
+<Note>
+  Only the **Owner** can promote someone to Admin or invite them as Admin. That action consumes an admin seat and may be blocked if you're at your plan's admin-seat limit. Transferring **Owner** is a separate action — contact support if you need it done.
+</Note>
+
+---
+
+## What each role sees in the app
+
+Navigation and the Home landing page adapt to your role:
+
+- **Owners and Admins** get the full sidebar: Mailbox, Organization settings, and finance roll-ups on Home.
+- **Payments and Billing** stay Owner-only.
+- **Gig Coordinators** see gigs and scheduling, but not finances or member administration.
+- **Members** get a streamlined view centered on their own gigs and personal Mailbox.
+
+If a sidebar item is locked for your role, clicking it shows a tooltip explaining what's gated — nothing silently disappears.
+
+---
+
+## Related guides
+
+<CardGroup cols={2}>
+  <Card title="Managing members" icon="users" href="/organization/members">
+    Add people and assign roles
+  </Card>
+  <Card title="Invitations" icon="envelope" href="/organization/members">
+    Bring new people in
+  </Card>
+  <Card title="Positions" icon="id-badge" href="/organization/setup">
+    Roles of work, not access
+  </Card>
+  <Card title="Organization setup" icon="building" href="/organization/setup">
+    Configure the org
+  </Card>
+</CardGroup>
