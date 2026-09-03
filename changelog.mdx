@@ -100,3 +100,33 @@ This changelog covers recent updates to the Soundcheck platform. New releases sh
 - Fixed a display issue on the crew availability calendar where declined offers appeared as available slots.
 - Setlist PDF export now respects custom section ordering.
 - Org Mailbox now shows a **Replies** view listing every person who responded, newest first, including answers on filled or expired requests.
+
+---
+
+## v2.0 — June 2025
+
+**CRM launch, n8n webhook sync, and availability overhaul**
+
+### CRM — customers, venues, sponsors, and leads
+
+- Launched the full **CRM suite** on Team and Enterprise plans: customer directory, venue directory, sponsor directory with commitment tracking, and the leads pipeline.
+- **Lead intake forms** can be embedded on your website or shared as a direct link. Submissions land automatically in your CRM → Leads pipeline.
+- **Convert lead to gig**: one-click conversion creates a linked gig and customer record simultaneously — no manual copy-paste.
+- Inventory tracking added to customer records: log gear, track assignment per gig, and mark returns.
+
+### n8n CRM webhook sync
+
+- New **n8n CRM sync** webhook lets you push external CRM data into Soundcheck automatically. Configure your n8n workflow to POST to your org's Soundcheck webhook endpoint — customer and lead records are created or updated on each payload.
+- Supported via the **Universal Event Format (UEF)** JSON schema. See [Integrations overview](/integrations/overview) for payload documentation.
+
+### Availability overhaul
+
+- Rebuilt **availability requests**: send bulk availability checks to your roster, track who's responded, and see a unified calendar view across all open requests.
+- **Crew offers**: send open-call staffing offers to multiple candidates simultaneously. The first to accept fills the position.
+- Availability and crew offer history is now visible per member on their profile.
+
+### Fixes and improvements
+
+- Home page finance roll-up now breaks down expected vs. actual payouts for the current month.
+- Calendar feed subscription (iCal/ICS) now includes venue address in event descriptions.
+- Fixed a timezone display bug on multi-day gigs spanning DST transitions.

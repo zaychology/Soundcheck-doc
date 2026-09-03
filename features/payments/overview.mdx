@@ -7,7 +7,7 @@ description: "Connect a bank account, onboard crew for payouts, and send ACH dir
 Soundcheck handles crew payments end to end: connect your organization's bank account, let crew members add their own payout destination, then send payments straight from the gig that generated them. Every payout is recorded against the gig, visible in your org-level Payments page, and traceable to settled.
 
 <Info>
-  Payment features are enabled per organization and per plan. Payments are available on **Pro and above**. If you don't see the pages described here, payouts aren't turned on for your organization yet — contact [support@soundcheck.live](mailto:support@soundcheck.live).
+  Payment features are enabled per organization and per plan. Payments are available on **Pro and above**. If you don't see the pages described here, payouts aren't turned on for your organization yet — contact [info@soundchecklive.io](mailto:info@soundchecklive.io).
 </Info>
 
 ## How payments work in Soundcheck
@@ -19,12 +19,18 @@ Two one-time setups unlock routine payouts:
 
 After that, paying the crew is a matter of opening the gig's **Finances** tab, reviewing the payable rows, and sending.
 
-## Two payout methods
+## ACH direct deposit vs. card
+
+Both methods let you pay crew directly from a gig, but they differ in cost, speed, and funding source:
 
 | Method | Funded from | Cost to your org | Typical arrival |
 |---|---|---|---|
 | **Direct Deposit (ACH)** | Your connected, verified bank account | Free — Soundcheck absorbs the fee | 2–3 business days |
 | **Card** | Your payout funding method via Stripe | Platform fee shown at confirmation | Per Stripe |
+
+**Direct deposit (ACH)** is the most cost-effective option for routine crew payments. Because it pulls from your verified bank account, there are no per-transaction fees charged to your organization. It does require a verified bank account on both sides — yours to fund, and the crew member's to receive.
+
+**Card payouts** settle faster in some cases and don't require the recipient to have a verified bank account, but they carry a platform fee shown at checkout. Use them when a crew member isn't set up for ACH or when speed is the priority.
 
 Manual methods — cash or payments made outside Soundcheck — are also available and let you record that a member was paid without moving money through Soundcheck.
 
@@ -109,16 +115,12 @@ For a cross-gig view of every payout your organization has sent, open the **Paym
 
 ## Related
 
-<CardGroup cols={3}>
-  <Card title="Per-gig payments" icon="money-check-dollar" href="/features/payments/overview">
-    Full reference for payable rows, methods, and statuses on a single gig.
-  </Card>
-
-  <Card title="Your profile" icon="user" href="/organization/setup">
-    Where crew members add their bank account and view earnings.
-  </Card>
-
-  <Card title="Post-event closeout" icon="circle-check" href="/features/gigs/closeout">
+<CardGroup cols={2}>
+  <Card title="Post-Event Closeout" icon="circle-check" href="/features/gigs/closeout">
     How payouts feed into the close-out checklist and the Settled state.
+  </Card>
+
+  <Card title="Contracts" icon="file-signature" href="/features/contracts/overview">
+    Send and track e-signature contracts tied to the same gig.
   </Card>
 </CardGroup>

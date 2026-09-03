@@ -4,12 +4,10 @@ sidebarTitle: "Client Portal"
 description: "Give clients a branded, secure home for their events — sign contracts, review invoices, complete forms, and follow updates, all tied to their CRM record."
 ---
 
-The client portal gives each of your clients a dedicated, branded space where they can act on their events without you chasing them over email. Invite a client once, and from then on they have a single place to sign agreements, review what's owed, fill out intake forms, and follow updates from your team — all organized around their own events.
-
-Every client's portal maps directly to their record in your CRM. What they see is scoped to their customer: their events, their contracts, their invoices, their forms. Nothing bleeds across to other clients.
+The client portal gives each of your clients a dedicated, branded space where they can act on their events without you chasing them over email. Invite a client once, and from then on they have a single place to sign agreements, review what's owed, fill out intake forms, and follow updates from your team — all organized around their own events. Every client's portal maps directly to their record in your CRM, and what they see is scoped to their customer: their events, their contracts, their invoices, their forms. Nothing bleeds across to other clients.
 
 <Info>
-  The client portal rolls out per organization. If you don't see portal actions on your customers, contact [support@soundcheck.live](mailto:support@soundcheck.live) to enable it.
+  The client portal rolls out per organization. If you don't see portal actions on your customers, contact [info@soundchecklive.io](mailto:info@soundchecklive.io) to enable it. Portal invitations require the **Team** plan or above.
 </Info>
 
 ## What the portal is
@@ -59,12 +57,32 @@ Once inside, a client can take action without going anywhere else:
 
 You invite a client from their **customer record** in your CRM — not from a gig directly.
 
-1. Go to **Business → Customers** and open the client.
-2. On the **Overview** tab, find the **Primary Contact** card.
-3. Select **Preview portal** first to confirm exactly what the client will see.
-4. When everything looks right, select **Invite to portal**. The primary contact receives a secure invitation to set up their sign-in.
+<Steps>
+  <Step title="Open the customer record">
+    Go to **Business → Customers** and open the client you want to invite.
+  </Step>
 
-The invitation goes to the **primary contact**, not the customer record as a whole. If you need to invite a different person, make them the primary contact first. Portal invitations require the **Team** plan or above and the client portal enabled for your organization.
+  <Step title="Preview the portal">
+    On the **Overview** tab, find the **Primary Contact** card and select **Preview portal**. Confirm exactly what the client will see before sending the invitation.
+  </Step>
+
+  <Step title="Send the invitation">
+    When everything looks right, select **Invite to portal**. The primary contact receives a secure invitation to set up their sign-in.
+  </Step>
+</Steps>
+
+The invitation goes to the **primary contact**, not the customer record as a whole. If you need to invite a different person, make them the primary contact first.
+
+## Managing portal content
+
+What a client sees in their portal depends on the work you've already done in Soundcheck — there's no separate "portal" setup beyond the invitation:
+
+- **Events** appear in the portal when a gig is linked to the customer record.
+- **Contracts** appear when you send a contract to the client's contact from within a gig.
+- **Invoices** appear when you share an invoice with the customer.
+- **Forms** appear when you assign an intake form to the customer or one of their events.
+
+Because everything flows from your CRM and gig records, converting leads, linking gigs, and assigning forms is what populates the portal automatically. You don't need to publish or push anything separately.
 
 ## How portal access connects to the CRM
 
@@ -77,21 +95,17 @@ The portal is tightly mapped to your CRM customer record:
 Because the mapping runs through your CRM, the work you already do — converting leads, linking gigs to customers, assigning forms — is what populates each client's portal automatically.
 
 <Tip>
-  Pair the client portal with [white-label contract branding](/features/contracts/overview) for a fully on-brand client experience: your logo and colors carry through both the portal and the contract signing window, so everything the client touches looks like it came from you.
+  Pair the client portal with [white-label contract branding](/features/contracts/overview) for a fully on-brand client experience: your logo and colors carry through both the portal and the contract signing window, so everything the client touches looks like it came from you. White-label branding is available on the **Enterprise** plan.
 </Tip>
 
 ## Related
 
-<CardGroup cols={3}>
-  <Card title="Inviting clients" icon="user-plus" href="/features/client-portal/overview">
-    Send an invite, preview the portal, and manage access.
-  </Card>
-
-  <Card title="Contracts, invoices & forms" icon="file-signature" href="/features/client-portal/overview">
-    What clients do once they're in the portal.
-  </Card>
-
+<CardGroup cols={2}>
   <Card title="Customers" icon="users" href="/crm/customers">
     The CRM records the portal maps to.
+  </Card>
+
+  <Card title="Contracts" icon="file-signature" href="/features/contracts/overview">
+    Send contracts for e-signature that appear in the client portal.
   </Card>
 </CardGroup>
