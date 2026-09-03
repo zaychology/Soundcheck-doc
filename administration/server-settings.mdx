@@ -1,0 +1,24 @@
+---
+title: "Server settings"
+description: "Configure Soundcheck commands, modules, automated messages, and access controls."
+---
+
+Soundcheck lets server managers tailor the bot to each community.
+
+## Control commands and modules
+
+Use `/cmd disable`, `enable`, `channel`, `member`, and `list` to control individual commands. Use the parallel `/module` group to control an entire feature category.
+
+Use `/bypass addrole` or `/bypass addmember` when a role or member must be exempt from a command restriction. `/bypass list` shows active exceptions.
+
+## Prefixes and automated messages
+
+Use `/prefix set` to add a prefix and `/prefix remove` to remove one. Slash commands remain available regardless of prefix configuration.
+
+Configure greetings with `/welcome add`, `remove`, and `list`; configure leave messages through `/goodbye`. Use `/songoftheday set` to schedule a song-of-the-day message, `/songoftheday config` to inspect it, and `/songoftheday remove` to disable it.
+
+## Roles and customization
+
+The `/autorole` group manages roles assigned to new members. Use `/customize avatar`, `banner`, `bio`, and `reset` to control Soundcheck’s server-specific profile customization where enabled.
+
+Run `/settings` to view the current server configuration. `/resetsettings` resets settings and is an administrator-only action; use it only when you intend to remove your configuration.

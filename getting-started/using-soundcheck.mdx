@@ -1,0 +1,35 @@
+---
+title: "Use Soundcheck"
+description: "Learn how to invoke Soundcheck commands and get help in Discord."
+---
+
+## Command formats
+
+Use Soundcheck through Discord slash commands, such as `/tracker unreleased`, or a server prefix command, such as `!tracker unreleased`. The configured prefix can vary by server.
+
+Run `/help` or `!help` to browse command categories. Use `/help command:<name>` (or the prefix equivalent) for command-specific usage where available.
+
+## Find a track or artist
+
+Start with the global tracker commands:
+
+```text
+/tracker unreleased <query>
+/tracker released <query>
+/tracker tracklists <query>
+/tracker art <query>
+```
+
+You can also use an artist command such as `/yeat tracker unreleased <query>`. Artist-specific groups expose only the tracker categories available for that artist.
+
+## Know what a command can access
+
+Some tools need an attachment, a supported URL, or an external account:
+
+- Use `/identify` with an audio attachment to identify a song.
+- Use `/lastfm login` to connect Last.fm before querying your own listening activity.
+- Pass an X, TikTok, Spotify, SoundCloud, or YouTube URL to the matching command group.
+
+<Tip>
+Slash commands show required options in Discord before you send them. They are the easiest way to discover a command’s accepted inputs.
+</Tip>

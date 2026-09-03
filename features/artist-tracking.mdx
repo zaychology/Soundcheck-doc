@@ -1,0 +1,37 @@
+---
+title: "Artist tracking"
+description: "Explore release trackers, snippets, eras, artwork, and music archives."
+---
+
+Soundcheck’s tracker system gives music communities a structured way to discover artist material. Use the generic `/tracker` group to search supported tracker content across artists, or an artist-specific group for curated shortcuts.
+
+## Tracker categories
+
+| Command | Finds |
+| --- | --- |
+| `/tracker unreleased` | Unreleased tracks and leaks |
+| `/tracker released` | Officially released music |
+| `/tracker musicvideos` | Music videos where available |
+| `/tracker albumcopies` | Album-copy archives where available |
+| `/tracker tracklists` | Tracklists |
+| `/tracker art` | Artwork and covers |
+| `/tracker samples` | Sample information |
+| `/tracker instagramlives` | Live or Instagram Live archives |
+| `/tracker era` | Album eras and sessions |
+| `/tracker recent` | Recently added tracker entries |
+| `/tracker random` | A random tracker entry |
+| `/tracker link` | A tracker link |
+
+## Snippets and compilations
+
+Use `/snippets` for snippet lookup and `/refreshsnippets` when the available snippets need refreshing. `/compilation` retrieves available compilation material.
+
+## Artist configuration
+
+Server managers can define a default artist with `/artist set`, inspect it with `/artist config`, and clear it with `/artist reset`. This makes artist-aware features faster to use in a community focused on one artist.
+
+The `/era` administration group lets server managers add, edit, delete, reorder, or import eras for a configured artist.
+
+<Note>
+Availability differs by artist and tracker source. The command group only exposes categories that have been implemented for that artist.
+</Note>

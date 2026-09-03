@@ -1,140 +1,25 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "luma",
+  "theme": "mint",
   "name": "Soundcheck",
-  "colors": {
-    "primary": "#7C3AED",
-    "light": "#A78BFA",
-    "dark": "#5B21B6"
-  },
+  "colors": { "primary": "#6D28D9", "light": "#8B5CF6", "dark": "#4C1D95" },
   "favicon": "/favicon.svg",
   "navigation": {
-    "tabs": [
-      {
-        "tab": "Documentation",
-        "groups": [
-          {
-            "group": "Get Started",
-            "pages": [
-              "introduction",
-              "getting-started/overview",
-              "getting-started/signup",
-              "getting-started/key-concepts",
-              "getting-started/first-7-days"
-            ]
-          },
-          {
-            "group": "Gigs",
-            "pages": [
-              "features/gigs/overview",
-              "features/gigs/creating-gigs",
-              "features/gigs/team-building",
-              "features/gigs/run-of-show",
-              "features/gigs/closeout"
-            ]
-          },
-          {
-            "group": "Crew & Availability",
-            "pages": [
-              "features/availability/overview",
-              "features/availability/availability-requests",
-              "features/availability/crew-calendar",
-              "organization/call-lists"
-            ]
-          },
-          {
-            "group": "Setlists & Music",
-            "pages": [
-              "features/setlists/overview",
-              "features/setlists/building-setlists",
-              "features/setlists/song-library"
-            ]
-          },
-          {
-            "group": "Contracts & Payments",
-            "pages": [
-              "features/contracts/overview",
-              "features/payments/overview",
-              "features/client-portal/overview"
-            ]
-          },
-          {
-            "group": "CRM & Leads",
-            "pages": [
-              "crm/overview",
-              "crm/customers",
-              "crm/venues",
-              "crm/leads"
-            ]
-          },
-          {
-            "group": "Integrations",
-            "pages": [
-              "integrations/overview",
-              "integrations/mcp-server",
-              "integrations/quickbooks",
-              "integrations/calendar-sync"
-            ]
-          },
-          {
-            "group": "Organization",
-            "pages": [
-              "organization/setup",
-              "organization/members",
-              "organization/roles-permissions"
-            ]
-          },
-          {
-            "group": "Mobile App",
-            "pages": [
-              "features/mobile/overview",
-              "features/mobile/installation",
-              "features/mobile/offline-and-sync"
-            ]
-          },
-          {
-            "group": "Help & FAQ",
-            "pages": [
-              "faq/overview",
-              "faq/workflows",
-              "faq/troubleshooting",
-              "changelog"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "Plans & Billing",
-        "groups": [
-          {
-            "group": "Subscriptions",
-            "pages": [
-              "subscriptions/plans",
-              "subscriptions/feature-comparison",
-              "subscriptions/billing"
-            ]
-          }
-        ]
-      }
-    ]
+    "tabs": [{
+      "tab": "Documentation",
+      "groups": [
+        { "group": "Get started", "pages": ["introduction", "getting-started/using-soundcheck", "getting-started/permissions"] },
+        { "group": "Music discovery", "pages": ["features/artist-tracking", "features/media-tools", "features/lastfm"] },
+        { "group": "Server features", "pages": ["features/voicemaster", "features/levels", "features/community-tools"] },
+        { "group": "Server administration", "pages": ["administration/server-settings", "administration/logging", "administration/premium"] },
+        { "group": "Command reference", "pages": ["reference/commands", "reference/supported-artists"] },
+        { "group": "Help", "pages": ["legal/privacy", "legal/terms", "legal/refunds"] }
+      ]
+    }]
   },
   "navbar": {
-    "links": [
-      {
-        "label": "Support",
-        "href": "mailto:info@soundchecklive.io"
-      }
-    ],
-    "primary": {
-      "type": "button",
-      "label": "Get Started Free",
-      "href": "https://app.soundchecklive.io"
-    }
+    "links": [{ "label": "GitHub", "href": "https://github.com/zaychology/Soundcheck" }],
+    "primary": { "type": "button", "label": "Add Soundcheck", "href": "https://discord.com/oauth2/authorize" }
   },
-  "footer": {
-    "socials": {
-      "x": "https://x.com/soundchecklive",
-      "instagram": "https://instagram.com/soundchecklive"
-    }
-  }
+  "footer": { "socials": { "github": "https://github.com/zaychology/Soundcheck" } }
 }

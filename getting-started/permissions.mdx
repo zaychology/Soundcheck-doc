@@ -1,0 +1,20 @@
+---
+title: "Permissions and setup"
+description: "The Discord permissions Soundcheck needs for server features."
+---
+
+Most music and information commands work without configuration. Administrative features require both a member with the listed permission and, in some cases, a bot permission.
+
+| Feature | Member permission | Bot capability |
+| --- | --- | --- |
+| Server settings, welcome/goodbye, logs, command controls | Manage Server | Send messages, view channels, manage webhooks where applicable |
+| Levels settings | Manage Server | Manage roles for role rewards |
+| Emoji management | Manage Expressions | Manage Expressions |
+| VoiceMaster setup | Manage Server | Manage channels, move members, manage permissions |
+| VoiceMaster role controls | Manage Roles and Manage Server | Manage channels and roles |
+
+## Recommended invite permissions
+
+For the complete experience, grant Soundcheck access to the channels it should use plus **View Audit Log**, **Manage Channels**, **Manage Roles**, **Manage Webhooks**, **Read Message History**, **Send Messages**, **Embed Links**, **Attach Files**, and **Use Application Commands**.
+
+Only grant permissions that fit your server’s configuration. If a feature is missing, first confirm that both the invoking member and the bot can access the target channel or role.

@@ -1,0 +1,24 @@
+---
+title: "Levels and rewards"
+description: "Configure message XP, leaderboards, and role rewards."
+---
+
+The levels system rewards active members with message XP and optional role rewards.
+
+## Configure levels
+
+Enable tracking with `/levels unlock`; disable it with `/levels lock`. Server managers can set the XP rate, message mode, stack-role behavior, ignored channels or roles, and leaderboard presentation.
+
+| Command | Purpose |
+| --- | --- |
+| `/levels add` | Add a role reward at a level |
+| `/levels remove` | Remove a role reward |
+| `/levels update` | Change a role reward |
+| `/levels roles` | View configured rewards |
+| `/levels leaderboard` | View the leaderboard |
+| `/levels leaderboard rename` | Name the leaderboard |
+| `/levels ignore` | Exclude a channel or role from XP |
+| `/levels config` | Review level settings |
+| `/levels sync` | Synchronize member rewards |
+
+Administrators can correct XP with `/levels setxp`, `/levels removexp`, or `/levels setlevel`. `/levels reset` and `/levels cleanup` are maintenance tools and should be used carefully.
