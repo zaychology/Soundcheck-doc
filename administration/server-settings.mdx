@@ -1,24 +1,40 @@
 ---
 title: "Server settings"
-description: "Configure Soundcheck commands, modules, automated messages, and access controls."
+description: "Turn commands on or off, set a prefix, and configure server features."
 ---
 
-Soundcheck lets server managers tailor the bot to each community.
+## Choose where commands work
 
-## Control commands and modules
+These need Manage Server.
 
-Use `/cmd disable`, `enable`, `channel`, `member`, and `list` to control individual commands. Use the parallel `/module` group to control an entire feature category.
+- `/cmd disable` and `/cmd enable` turn one command off or on for the whole server. `/cmd channel` turns it off in one channel, `/cmd member` for one member, and `/cmd list` shows what's off.
+- `/module` does the same for a whole category, such as Last.fm or Levels.
+- `/bypass addrole` and `/bypass addmember` let a role or member ignore these limits. `/bypass list` shows them.
 
-Use `/bypass addrole` or `/bypass addmember` when a role or member must be exempt from a command restriction. `/bypass list` shows active exceptions.
+## Prefix and settings
 
-## Prefixes and automated messages
+These work by mentioning Soundcheck, and need Administrator to change.
 
-Use `/prefix set` to add a prefix and `/prefix remove` to remove one. Slash commands remain available regardless of prefix configuration.
+- `@Soundcheck prefix` shows the prefix. `prefix set` and `prefix remove` change it.
+- `@Soundcheck settings` shows every setting for the server.
+- `@Soundcheck resetsettings` resets everything. It can't be undone.
 
-Configure greetings with `/welcome add`, `remove`, and `list`; configure leave messages through `/goodbye`. Use `/songoftheday set` to schedule a song-of-the-day message, `/songoftheday config` to inspect it, and `/songoftheday remove` to disable it.
+## Song of the Day
 
-## Roles and customization
+`/songoftheday set <channel> <role>` posts a song from your artist's tracker every day at 12:00 New York time, with a ping for the role. `/songoftheday config` shows the setup, `/songoftheday run` posts one now, and `/songoftheday remove` turns it off. Needs [Premium](/administration/premium) and Administrator.
 
-The `/autorole` group manages roles assigned to new members. Use `/customize avatar`, `banner`, `bio`, and `reset` to control Soundcheck’s server-specific profile customization where enabled.
+## LEAKED.CX feed
 
-Run `/settings` to view the current server configuration. `/resetsettings` resets settings and is an administrator-only action; use it only when you intend to remove your configuration.
+`@Soundcheck leakedcx add <channel> <feed>` posts new LEAKED.CX threads to a channel. `leakedcx status` shows your feeds and `leakedcx remove` stops one. Needs Administrator.
+
+## Bot profile
+
+`/customize avatar`, `banner` and `bio` give Soundcheck its own look in your server. `/customize reset` puts it back. Needs Premium and Administrator.
+
+## Welcome, goodbye and autoroles
+
+`/welcome`, `/goodbye` and `/autorole` save messages and roles for members who join or leave.
+
+<Warning>
+These don't run right now. They need Soundcheck to see members joining and leaving, and Discord hasn't given Soundcheck that permission yet. Your settings are kept for when it does.
+</Warning>

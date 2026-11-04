@@ -1,24 +1,37 @@
 ---
 title: "Levels and rewards"
-description: "Configure message XP, leaderboards, and role rewards."
+description: "Message XP, leaderboards and role rewards."
 ---
 
-The levels system rewards active members with message XP and optional role rewards.
+Members earn XP by chatting. Server managers can hand out roles at set levels.
 
-## Configure levels
+## For members
 
-Enable tracking with `/levels unlock`; disable it with `/levels lock`. Server managers can set the XP rate, message mode, stack-role behavior, ignored channels or roles, and leaderboard presentation.
+- `/levels` shows your level, or another member's.
+- `/levels leaderboard` shows the top members.
+- `/levels roles` lists the reward roles.
 
-| Command | Purpose |
+## Set it up
+
+Turn leveling on with `/levels unlock` and off with `/levels lock`. These need Manage Server.
+
+| Command | What it does |
 | --- | --- |
-| `/levels add` | Add a role reward at a level |
-| `/levels remove` | Remove a role reward |
-| `/levels update` | Change a role reward |
-| `/levels roles` | View configured rewards |
-| `/levels leaderboard` | View the leaderboard |
-| `/levels leaderboard rename` | Name the leaderboard |
-| `/levels ignore` | Exclude a channel or role from XP |
-| `/levels config` | Review level settings |
-| `/levels sync` | Synchronize member rewards |
+| `/levels add <role> <rank>` | Give a role at a level |
+| `/levels update <role> <rank>` | Change the level for a reward role |
+| `/levels remove <rank>` | Remove a reward |
+| `/levels stackroles` | Keep earlier reward roles, or keep only the highest |
+| `/levels messagemode` | Choose where level-up messages go |
+| `/levels setrate` | Change how fast XP builds up |
+| `/levels ignore` | Stop a channel or role from earning XP |
+| `/levels list` | Show ignored channels and roles |
+| `/levels config` | Show all level settings |
+| `/levels leaderboard rename` | Change the leaderboard's title |
 
-Administrators can correct XP with `/levels setxp`, `/levels removexp`, or `/levels setlevel`. `/levels reset` and `/levels cleanup` are maintenance tools and should be used carefully.
+## Fix XP
+
+`/levels setxp`, `/levels removexp` and `/levels setlevel` change one member. `/levels cleanup` resets members who left. `/levels reset` resets everyone and needs Administrator, so use it carefully.
+
+<Note>
+`/levels sync`, which re-checks every member's reward roles, needs Soundcheck to see the member list. Discord hasn't given Soundcheck that permission yet, so it may not find everyone.
+</Note>

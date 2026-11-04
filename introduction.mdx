@@ -1,27 +1,25 @@
 ---
 title: "Soundcheck"
-description: "Documentation for Soundcheck, a Discord bot for music communities and server management."
+description: "Soundcheck is a Discord bot that searches fan-run artist trackers, snippets and eras, with media tools and server features around them."
 ---
 
-Soundcheck is a Discord bot for music discovery, artist tracking, media tools, and community management. It supports both slash commands and prefix commands where Discord permits them.
-
-The bot combines music-focused features—trackers, snippets, metadata tools, Last.fm, Spotify, SoundCloud, TikTok, X, and YouTube—with practical server features such as configurable commands, welcome messages, logs, levels, emoji management, and temporary voice channels.
+Soundcheck reads the community-run Google Sheets that catalogue an artist's unreleased and released songs, and makes them searchable from Discord. It also finds snippets, downloads media from common links, checks audio files, connects Last.fm, and gives server managers control over where each command works.
 
 <CardGroup cols={2}>
-  <Card title="Start using Soundcheck" icon="rocket" href="/getting-started/using-soundcheck">Learn command formats, how to find help, and the bot permissions you need.</Card>
-  <Card title="Artist tracking" icon="music" href="/features/artist-tracking">Search releases, unreleased material, snippets, eras, artwork, and tracker links.</Card>
-  <Card title="Manage your server" icon="sliders" href="/administration/server-settings">Configure modules, channels, messages, and access controls.</Card>
-  <Card title="Browse all commands" icon="terminal" href="/reference/commands">Use the grouped command reference for every public feature.</Card>
+  <Card title="Start using Soundcheck" icon="rocket" href="/getting-started/using-soundcheck">How to run commands, pick an artist, and get help.</Card>
+  <Card title="Artist tracking" icon="music" href="/features/artist-tracking">Search trackers, eras, snippets and compilations.</Card>
+  <Card title="Manage your server" icon="sliders" href="/administration/server-settings">Turn commands on or off, set a prefix, and set up logs.</Card>
+  <Card title="Every command" icon="terminal" href="https://soundcheckbot.xyz/commands">Searchable list of every command, updated automatically.</Card>
 </CardGroup>
 
 ## What Soundcheck does
 
-- Finds artist tracker content including released and unreleased music, tracklists, artwork, eras, snippets, live recordings, and more.
-- Retrieves song, artist, album, metadata, cover-art, and platform information.
-- Connects Last.fm accounts for now-playing status, listening history, charts, and profiles.
-- Provides configurable leveling, message logging, automated greetings, roles, and moderation-friendly controls.
-- Lets members create and manage their own temporary voice channels through VoiceMaster.
+- Searches trackers for 27 artists plus every tracker listed on TrackerHub, and any public tracker sheet you load yourself.
+- Finds snippets and compilations, and shows era details with their artwork.
+- Downloads media from SoundCloud, TikTok, X and Pillowcase links, and looks up Spotify, SoundCloud and YouTube links.
+- Checks audio files: spectrograms, tags, metadata, and song identification.
+- Shows Last.fm listening, Genius credits, levels, and temporary voice channels.
 
 <Note>
-Server settings and moderation controls require the relevant Discord permission. Owner-only operational commands are intentionally not documented here.
+Soundcheck does not download from YouTube. YouTube blocks the servers Soundcheck runs on, so `/youtube` only searches and shows video details.
 </Note>

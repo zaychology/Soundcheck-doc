@@ -2,24 +2,106 @@
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
   "name": "Soundcheck",
-  "colors": { "primary": "#6D28D9", "light": "#8B5CF6", "dark": "#4C1D95" },
+  "colors": {
+    "primary": "#18181B",
+    "light": "#E4E4E7",
+    "dark": "#18181B"
+  },
   "favicon": "/favicon.png",
   "navigation": {
-    "tabs": [{
-      "tab": "Documentation",
-      "groups": [
-        { "group": "Get started", "pages": ["introduction", "getting-started/using-soundcheck", "getting-started/permissions"] },
-        { "group": "Music discovery", "pages": ["features/artist-tracking", "features/media-tools", "features/lastfm"] },
-        { "group": "Server features", "pages": ["features/voicemaster", "features/levels", "features/community-tools"] },
-        { "group": "Server administration", "pages": ["administration/server-settings", "administration/logging", "administration/premium"] },
-        { "group": "Command reference", "pages": ["reference/commands", "reference/supported-artists"] },
-        { "group": "Help", "pages": ["legal/privacy", "legal/terms", "legal/refunds"] }
-      ]
-    }]
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get started",
+            "pages": [
+              "introduction",
+              "getting-started/using-soundcheck",
+              "getting-started/permissions"
+            ]
+          },
+          {
+            "group": "Music discovery",
+            "pages": [
+              "features/artist-tracking",
+              "features/media-tools",
+              "features/lastfm"
+            ]
+          },
+          {
+            "group": "Server features",
+            "pages": [
+              "features/voicemaster",
+              "features/levels",
+              "features/community-tools"
+            ]
+          },
+          {
+            "group": "Server administration",
+            "pages": [
+              "administration/server-settings",
+              "administration/logging",
+              "administration/premium"
+            ]
+          },
+          {
+            "group": "Reference",
+            "pages": [
+              "reference/commands",
+              "reference/supported-artists"
+            ]
+          },
+          {
+            "group": "Help",
+            "pages": [
+              "legal/privacy",
+              "legal/terms",
+              "legal/refunds"
+            ]
+          }
+        ]
+      }
+    ]
   },
   "navbar": {
-    "links": [{ "label": "Support server", "href": "https://discord.gg/Yqyh7pVzne" }],
-    "primary": { "type": "button", "label": "Add Soundcheck", "href": "https://discord.com/oauth2/authorize?client_id=1462885866144923658&permissions=8&scope=bot+applications.commands" }
+    "links": [
+      {
+        "label": "Commands",
+        "href": "https://soundcheckbot.xyz/commands"
+      },
+      {
+        "label": "Support server",
+        "href": "https://discord.gg/Yqyh7pVzne"
+      }
+    ],
+    "primary": {
+      "type": "button",
+      "label": "Add to Discord",
+      "href": "https://discord.com/oauth2/authorize?client_id=1462885866144923658&permissions=8&scope=bot+applications.commands"
+    }
   },
-  "footer": { "socials": { "discord": "https://discord.gg/Yqyh7pVzne" } }
+  "footer": {
+    "socials": {
+      "discord": "https://discord.gg/Yqyh7pVzne",
+      "website": "https://soundcheckbot.xyz"
+    }
+  },
+  "appearance": {
+    "default": "dark"
+  },
+  "background": {
+    "color": {
+      "dark": "#000000"
+    }
+  },
+  "fonts": {
+    "heading": {
+      "family": "Unbounded",
+      "weight": 600
+    },
+    "body": {
+      "family": "Hanken Grotesk"
+    }
+  }
 }

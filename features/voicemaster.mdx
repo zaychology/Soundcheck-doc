@@ -3,7 +3,11 @@ title: "VoiceMaster"
 description: "Create temporary voice channels members can manage themselves."
 ---
 
-VoiceMaster creates a personal, temporary voice channel when a member joins the configured creation channel. The channel owner can manage access and settings without needing a moderator.
+VoiceMaster creates a personal, temporary voice channel when a member joins the creation channel. The channel owner can manage it without a moderator.
+
+<Note>
+VoiceMaster is part of [Premium](/administration/premium).
+</Note>
 
 ## Set up VoiceMaster
 
@@ -20,4 +24,4 @@ While in a VoiceMaster channel, members can use `/voicemaster lock`, `unlock`, `
 
 ## Admin controls
 
-Use `/voicemaster role` to configure eligible roles, `/voicemaster join role` to control join behavior, and `/voicemaster category private` for private-channel behavior. `/voicemaster reset` removes the configuration when you no longer want to use VoiceMaster.
+`/voicemaster category` picks where new channels go and `/voicemaster category private` where hidden ones go. `/voicemaster role` and `/voicemaster join role` give members a role while they're in a VoiceMaster channel. `/voicemaster reset` removes the configuration when you no longer want to use VoiceMaster.

@@ -1,14 +1,27 @@
 ---
 title: "Premium"
-description: "Purchase, redeem, and check Soundcheck Premium."
+description: "What Premium unlocks, and how to buy, redeem and move it."
 ---
 
-Use `/premium buy` to begin a Premium purchase flow, `/premium status` to inspect the current server’s entitlement, and `/premium redeem` to apply a redemption code.
+Premium is sold through Discord's own checkout. Run the commands in the server you want to upgrade.
 
-Premium applies to the server selected by the command flow. Make sure you run the command in the server you intend to upgrade.
+## What it unlocks
 
-<Note>
-Premium administration commands such as assignment, removal, key checks, and diagnostics are restricted to bot operators and are not part of the public documentation.
-</Note>
+- **A default artist.** `/artist set` for the server and `/artist mine` for yourself, so tracker, snippet and compilation commands skip the artist pick.
+- **Song of the Day.** A daily song from your artist's tracker, posted to a channel with a role ping (`/songoftheday`).
+- **VoiceMaster.** Temporary voice channels members run themselves.
+- **Surface.** `/surface` posts a track from your server's artist.
+- **Bot profile.** `/customize` gives Soundcheck its own avatar, banner and bio in your server.
+
+## Commands
+
+| Command | What it does |
+| --- | --- |
+| `/premium buy` | Shows the plans and opens Discord's checkout |
+| `/premium redeem` | Applies a Lifetime Guild purchase to this server |
+| `/premium status` | Shows this server's Premium |
+| `/premium transfer` | Moves your Lifetime Guild Premium from another server to this one |
+
+Only the member who bought a Lifetime Guild plan can move it, once every 30 days. Run `/premium transfer` in the new server; you need Manage Server there.
 
 For billing questions, see the [refund policy](/legal/refunds).

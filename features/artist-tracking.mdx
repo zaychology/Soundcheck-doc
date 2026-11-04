@@ -1,37 +1,52 @@
 ---
 title: "Artist tracking"
-description: "Explore release trackers, snippets, eras, artwork, and music archives."
+description: "Search trackers, eras, snippets and compilations."
 ---
 
-Soundcheck’s tracker system gives music communities a structured way to discover artist material. Use the generic `/tracker` group to search supported tracker content across artists, or an artist-specific group for curated shortcuts.
+Trackers are Google Sheets that fan communities keep up to date with an artist's songs, eras, videos, art and samples. Soundcheck reads them live, so results match the sheet.
 
-## Tracker categories
+Every tracker command starts with an optional `tracker` option. Pick an artist there, or leave it blank to use your server's or your own default (see [Use Soundcheck](/getting-started/using-soundcheck#pick-an-artist)).
+
+## Search songs
 
 | Command | Finds |
 | --- | --- |
-| `/tracker unreleased` | Unreleased tracks and leaks |
-| `/tracker released` | Officially released music |
-| `/tracker musicvideos` | Music videos where available |
-| `/tracker albumcopies` | Album-copy archives where available |
+| `/tracker search` | Released and unreleased songs together, or one tab with `sheet` |
+| `/tracker unreleased` | Unreleased songs |
+| `/tracker released` | Released songs |
+| `/tracker recent` | The 25 newest unreleased entries |
+| `/tracker random` | A random song |
+
+`title`, `artist` and `producer` can be combined. Separate several names with `;` and they can be in any order, for example `artist:Ken Carson;Destroy Lonely`. Results are ranked best match first, 100 per page.
+
+## Everything else in a tracker
+
+| Command | Finds |
+| --- | --- |
+| `/tracker era` | An era's dates, songs and artwork |
+| `/tracker musicvideos` | Music videos |
+| `/tracker albumcopies` | Album copies |
 | `/tracker tracklists` | Tracklists |
-| `/tracker art` | Artwork and covers |
-| `/tracker samples` | Sample information |
-| `/tracker instagramlives` | Live or Instagram Live archives |
-| `/tracker era` | Album eras and sessions |
-| `/tracker recent` | Recently added tracker entries |
-| `/tracker random` | A random tracker entry |
-| `/tracker link` | A tracker link |
+| `/tracker art` | Cover art |
+| `/tracker samples` | Samples |
+| `/tracker instagramlives` | Instagram Lives |
+| `/tracker link` | The link to the tracker sheet |
+
+Not every tracker has every tab. If a tab is missing, the command says so.
+
+## Any tracker, not only ours
+
+- **TrackerHub.** Every tracker listed on TrackerHub shows up in the `tracker` option too. `/trackerhub` searches TrackerHub's list.
+- **Your own sheet.** `/tracker load <link>` adds any public Google Sheets tracker to your own `tracker` list for 7 days. You can keep up to 5.
 
 ## Snippets and compilations
 
-Use `/snippets` for snippet lookup and `/refreshsnippets` when the available snippets need refreshing. `/compilation` retrieves available compilation material.
+- `/snippets` searches an artist's archived snippets by name.
+- `/compilation` searches an artist's compilation, or gives its link.
+- `/refreshsnippets` reloads the snippet list. It needs Manage Messages.
 
-## Artist configuration
+## Server artist and eras
 
-Server managers can define a default artist with `/artist set`, inspect it with `/artist config`, and clear it with `/artist reset`. This makes artist-aware features faster to use in a community focused on one artist.
-
-The `/era` administration group lets server managers add, edit, delete, reorder, or import eras for a configured artist.
-
-<Note>
-Availability differs by artist and tracker source. The command group only exposes categories that have been implemented for that artist.
-</Note>
+- `/artist set` picks the server's default artist, `/artist config` shows it and `/artist reset` clears it. `/artist mine` sets your own. These need [Premium](/administration/premium).
+- `/era add`, `edit`, `delete` and `reorder` let server managers keep their own era list for the server's artist.
+- `/surface` posts a track from the server's artist into the channel. It needs Premium and Manage Messages.

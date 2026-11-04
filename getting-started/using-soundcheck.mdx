@@ -1,35 +1,35 @@
 ---
 title: "Use Soundcheck"
-description: "Learn how to invoke Soundcheck commands and get help in Discord."
+description: "Run commands, choose an artist, and get help in Discord."
 ---
 
-## Command formats
+## Run a command
 
-Use Soundcheck through Discord slash commands, such as `/tracker unreleased`, or a server prefix command, such as `!tracker unreleased`. The configured prefix can vary by server.
+Type `/` in any channel and pick a Soundcheck command, such as `/tracker unreleased`. Discord shows each command's options before you send it.
 
-Run `/help` or `!help` to browse command categories. Use `/help command:<name>` (or the prefix equivalent) for command-specific usage where available.
+You can also mention the bot: `@Soundcheck tracker unreleased`. A few commands, such as `prefix` and `settings`, only work this way.
 
-## Find a track or artist
+<Note>
+Soundcheck can't read normal messages, so a custom prefix like `!tracker` is not available. Mention `@Soundcheck` instead.
+</Note>
 
-Start with the global tracker commands:
+Run `/help` to browse categories, or `/help command:<name>` for one command.
+
+## Pick an artist
+
+Tracker, snippet and compilation commands take an optional artist or `tracker` option. Picking one each time is free.
+
+To skip that step, a server manager can set a default with `/artist set`, and you can set your own with `/artist mine`. Both need [Premium](/administration/premium).
 
 ```text
-/tracker unreleased <query>
-/tracker released <query>
-/tracker tracklists <query>
-/tracker art <query>
+/tracker unreleased tracker:Yeat title:talk
+/snippets artist:Ken Carson
+/tracker search title:sky
 ```
 
-You can also use an artist command such as `/yeat tracker unreleased <query>`. Artist-specific groups expose only the tracker categories available for that artist.
+## Commands that need something from you
 
-## Know what a command can access
-
-Some tools need an attachment, a supported URL, or an external account:
-
-- Use `/identify` with an audio attachment to identify a song.
-- Use `/lastfm login` to connect Last.fm before querying your own listening activity.
-- Pass an X, TikTok, Spotify, SoundCloud, or YouTube URL to the matching command group.
-
-<Tip>
-Slash commands show required options in Discord before you send them. They are the easiest way to discover a command’s accepted inputs.
-</Tip>
+- `/identify` needs an audio file or a link to one.
+- `/media spectrogram`, `/media tag` and `/media exiftool` need a file or a link.
+- `/lastfm login` links your Last.fm account before `/lastfm now` and the chart commands can use it.
+- `/download` needs a SoundCloud, TikTok, X or Pillowcase link.

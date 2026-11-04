@@ -1,20 +1,21 @@
 ---
 title: "Logging"
-description: "Send moderation and server event logs to dedicated Discord channels."
+description: "Post server events to channels you choose."
 ---
 
-Soundcheck can post log events to a channel you choose. Configure a log with `/log add <event> <channel>` and remove it with `/log remove`.
+Soundcheck can post server events, such as deleted messages, role changes and channel changes, to a channel you pick. Logging needs Manage Server.
 
-## Management commands
-
-| Command | Purpose |
+| Command | What it does |
 | --- | --- |
-| `/log status` | Show configured log destinations |
-| `/log ignore` | Configure ignored targets for a log event |
-| `/log ignore list` | List current ignored targets |
-| `/log ignore remove` | Remove an ignored target |
-| `/log bot add` | Configure bot-event logging |
-| `/log bot remove` | Remove bot-event logging |
-| `/log bot status` | Inspect bot-event logging |
+| `/log add <channel> <event>` | Post an event type to a channel |
+| `/log remove <channel>` | Stop posting to a channel, or only one event with `event` |
+| `/log status` | Show where each event goes |
+| `/log ignore` | Stop logging a member or channel |
+| `/log ignore list` | Show what's ignored |
+| `/log ignore remove` | Start logging it again |
 
-Give Soundcheck access to the destination channel. If event logs do not appear, verify the bot can view and send messages there and has the permissions required for the event type.
+Soundcheck must be able to see and send messages in the log channel.
+
+<Note>
+Discord hasn't given Soundcheck access to message text or the member list, so message logs can't show what a message said, and join and leave events aren't logged.
+</Note>
