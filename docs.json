@@ -78,7 +78,7 @@
     "primary": {
       "type": "button",
       "label": "Add to Discord",
-      "href": "https://discord.com/oauth2/authorize?client_id=1462885866144923658&permissions=8&scope=bot+applications.commands"
+      "href": "https://discord.com/oauth2/authorize?client_id=1462885866144923658&permissions=4512811545119953&scope=bot+applications.commands"
     }
   },
   "footer": {
