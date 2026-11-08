@@ -3,21 +3,38 @@ title: "Last.fm"
 description: "Connect a Last.fm account and view listening data in Discord."
 ---
 
-Link your Last.fm account with `/lastfm login <username>`. Soundcheck saves the username for your Discord account. Use `/lastfm logout` to remove it.
+Connect your account with `/lastfm account login`. You approve Soundcheck on Last.fm's own page; Soundcheck never sees your password. `/lastfm account logout` disconnects it and deletes your saved library and crowns.
 
-## Listening commands
+## Your listening
 
 | Command | Purpose |
 | --- | --- |
-| `/lastfm now` | Show what you are currently scrobbling |
-| `/lastfm recent` | View recent tracks |
-| `/lastfm topartists` | View top artists for a period |
-| `/lastfm toptracks` | View top tracks for a period |
-| `/lastfm topalbums` | View top albums for a period |
-| `/lastfm whois` | View a Last.fm profile |
-| `/lastfm count` | View total scrobble count |
-| `/lastfm color` | Set the color of your Last.fm cards |
+| `/lastfm now` (or `/nowplaying`) | What you're scrobbling now |
+| `/lastfm recent`, `/lastfm recentfor` | Recent tracks, or recent tracks by one artist |
+| `/lastfm top artists`, `albums`, `tracks` | Your top charts for a period |
+| `/lastfm top tenalbums`, `tentracks` | Your top ten albums or tracks by an artist |
+| `/lastfm plays artist`, `album`, `track`, `all`, `total` | Your play counts |
+| `/lastfm overview`, `streak`, `milestone` | Artist stats, listening streak, a scrobble milestone |
+| `/lastfm taste` | Compare your taste with another member |
+| `/lastfm collage`, `favorites`, `recommendation`, `link` | Album collage, liked tracks, a random pick, song links |
+| `/lastfm account whois` | A Last.fm profile |
+| `/lastfm config color` | The colour of your Last.fm cards |
 
-`/nowplaying` is a shortcut for the now-playing command.
+Most commands take an optional `member`, so you can see another member's listening once they've connected their account.
 
-Most commands take an optional `member`, so you can see another member's listening once they've linked their account. The top charts also take a `period`.
+## Leaderboards
+
+`/lastfm account update` saves your library so you show up on leaderboards (it also runs when you log in).
+
+| Command | Purpose |
+| --- | --- |
+| `/lastfm global whoknows`, `whoknowsalbum`, `whoknowstrack` | Top listeners on Soundcheck across every server |
+| `/lastfm whoknows artist`, `album`, `track` | Top listeners in this server. The #1 listener of an artist (30+ plays) holds its 👑 crown |
+| `/lastfm board crowns`, `mostcrowns` | Your crowns in this server, and who has the most |
+| `/lastfm playing` | What members of this server are scrobbling right now |
+| `/lastfm board server`, `global` | Votes on now playing cards |
+| `/lastfm hide add`, `remove`, `list` | Server managers hide a member from this server's boards |
+
+<Note>
+The server boards (`whoknows`, `crowns`, `playing`) need Discord's Server Members access to know who is in your server. Until Discord grants it, they say they aren't available yet. The global boards work now.
+</Note>
