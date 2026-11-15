@@ -45,6 +45,7 @@
           {
             "group": "Reference",
             "pages": [
+              "changelog",
               "reference/commands",
               "reference/supported-artists"
             ]

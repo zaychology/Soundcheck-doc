@@ -1,0 +1,158 @@
+---
+title: "Changelog"
+description: "New features, changes and fixes in Soundcheck."
+rss: true
+---
+
+Updates to Soundcheck, newest first. Ask about any of them in the [support server](https://discord.gg/Yqyh7pVzne).
+
+<Update label="November 15, 2026">
+
+### Fixes
+
+- `/trackerdle` opens faster on big trackers.
+
+</Update>
+
+<Update label="November 14, 2026">
+
+### Fixes
+
+- `/artist era` used in DMs now says it only works in a server.
+
+</Update>
+
+<Update label="November 12, 2026">
+
+### Changed
+
+- `/era` is now `/artist era`. Servers that turned `/era` on or off with `/cmd` keep that setting.
+
+</Update>
+
+<Update label="November 11, 2026">
+
+### Fixes
+
+- `/download` no longer fails on links that take a while to fetch.
+- `/games uselessfact` answers right away and gives up after 8 seconds instead of hanging.
+- `/leakedcx remove` only removes a feed that posts to the channel you name.
+- Trackerdle stats are kept when a tracker moves to its TrackerHub copy.
+- A tracker whose sheet went private now leaves the `tracker` list within a day.
+
+</Update>
+
+<Update label="November 10, 2026" description="Trackerdle and On This Day update">
+
+### New features
+
+- `/trackerdle history` shows your past boards, or every past answer of one tracker.
+- `/trackerdle leaderboard` has pages.
+
+### Changed
+
+- Trackerdle treats every version of a song ("[V1]", "[V2]"…) as one guess.
+- A Trackerdle board you started and never finished now counts as a loss.
+- `/tracker onthisday` says when a song was only revealed (no audio), or leaked and is now lost.
+
+### Fixes
+
+- Trackerdle keeps every guess, even ones sent quickly one after another.
+- Daily posts work for servers whose default tracker comes from TrackerHub.
+- TrackerHub trackers stay listed when TrackerHub can't be read for a moment.
+- Big trackers no longer slow the bot down while they load.
+
+</Update>
+
+<Update label="November 8, 2026" description="Stats update">
+
+### New features
+
+- `/onthisday set` posts the day's On This Day card in a channel every day at 12:00 New York time, with an optional role ping (Premium).
+- `/tracker stats` shows a tracker's numbers: songs, availability, songs per year, top eras, producers and features.
+- `/tracker producer` shows one producer's songs, eras and collaborators.
+- `/tracker wrapped` shows a tracker's year: songs that surfaced, OG files, the busiest months.
+
+### Changed
+
+- Slow trackers show a "Loading…" note instead of leaving you waiting.
+
+</Update>
+
+<Update label="November 7, 2026" description="Trackerdle update">
+
+### New features
+
+- `/trackerdle`: guess the day's mystery song from a tracker in 8 tries, with hints for era, credits, date, type and length. Share your result, check `/trackerdle stats` and the server's `/trackerdle leaderboard`.
+- `@Soundcheck <link>` downloads the link, and the **Download media** message menu downloads links in any message.
+
+### Changed
+
+- `/identify` is now `/media identify`.
+- Text commands only work by mentioning `@Soundcheck`. `/prefix` and AFK are removed.
+- Welcome and goodbye messages, autoroles, `/log`, VoiceMaster, leveling and server `/emoji` are removed, and their saved data is deleted. Other bots do these well.
+- Song names starting with any emoji are cleaned up in searches, not just a fixed list of emojis.
+
+### Fixes
+
+- Deleting a channel or role removes it from every Soundcheck setting right away.
+
+</Update>
+
+<Update label="November 6, 2026">
+
+### New features
+
+- `/tracker onthisday` lists every song that leaked, surfaced or released on a day in any year.
+
+### Fixes
+
+- Big trackers no longer hang while loading.
+
+</Update>
+
+<Update label="November 5, 2026">
+
+### New features
+
+- `/tracker era` finds a tracker's eras straight from the sheet.
+
+### Changed
+
+- Commands named in replies are clickable.
+
+### Fixes
+
+- Curly apostrophes in @mention commands no longer break them.
+- The `/lastfm whoknows` title link shows properly.
+
+</Update>
+
+<Update label="November 4, 2026" description="New look">
+
+### Changed
+
+- Soundcheck no longer asks for Administrator when you invite it.
+- Admin commands are hidden from members who can't use them.
+- `/information` is now `/info`, and `/games` is back.
+- `/help` lists commands as clickable links.
+- Audio files play in Discord's player again.
+
+</Update>
+
+<Update label="November 3, 2026">
+
+### New features
+
+- `/premium transfer` moves a lifetime server Premium to another server you manage.
+
+### Changed
+
+- The per-artist commands (`/yeat tracker …` and the others) are replaced by `/tracker`, `/snippets` and `/compilation` with a `tracker` or `artist` option.
+
+### Fixes
+
+- Options that take a server, channel or user ID accept every ID, including new long ones.
+- `/media cover` adds the Parental Advisory label again.
+
+</Update>
