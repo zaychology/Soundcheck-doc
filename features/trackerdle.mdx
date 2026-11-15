@@ -1,0 +1,77 @@
+---
+title: "Trackerdle"
+description: "A daily guess-the-song puzzle for every tracker."
+---
+
+Trackerdle is a guess-the-song game built on the trackers. Every tracker has one mystery song a day, the same for everyone. You have 8 guesses, and each guess tells you how close it is. A new song comes at midnight New York time.
+
+## How to play
+
+1. Run `/trackerdle play` and pick a `tracker`. Picking one is free. Leave it blank to use your server's default or your own (`/artist mine`), which needs premium.
+2. Guess a song with `/trackerdle guess`. The `song` option suggests songs from that tracker's Unreleased sheet as you type, and it also matches alternate titles.
+3. Read the hints, then guess again. Use them together: songs from the same session often share an era, producers and date.
+4. Win by guessing the song, or lose after 8 wrong guesses. Either way you see the song's normal card from the tracker.
+
+Your board is private, so only you see it. Boards are played with slash commands only. A song you already guessed can't be guessed again, and a guess that isn't a song in the sheet doesn't use up a try.
+
+The mystery song is picked from the tracker's notable songs: names with an emoji in front, or songs listed in its Best Of or Grails tab. A tracker with fewer than 20 of those uses every named Unreleased song instead. Placeholder names like "???" or "Untitled" are never picked.
+
+## The hints
+
+Every guess is compared with the mystery song on up to six hints.
+
+| Hint | What it compares | 🟩 | 🟨 | 🟥 |
+| --- | --- | --- | --- | --- |
+| **Era** | The era of the version you guessed | Same era | The era next to it in the sheet | Any other era |
+| **Credits** | Producers and features of all versions | Exactly the same people | Some people in common | Nobody in common |
+| **Surfaced** | When the version you guessed first showed up | Same month | Same year | Any other year |
+| **Type** | The song's newest version | Same type, like Throwaway or Feature | | Different type |
+| **Available** | The song's best version | Same availability, like Full or Snippet | | Different availability |
+| **Length** | The version you guessed | Exactly the same length | Within 20 seconds | More than 20 seconds apart |
+
+- An arrow means the answer is further along. ⬆️ means the mystery song is later (or longer), and ⬇️ means it is earlier (or shorter). Era, Surfaced and Length have arrows.
+- ⬜ means the sheet doesn't say, for your guess or for the mystery song.
+- The tracker's own artist never counts as a credit.
+- A hint that no song in a tracker has a value for is left off that tracker's boards.
+- On Surfaced, a sheet that only has a year for a song compares years: 🟩 is the same year and 🟨 is one year apart.
+
+### What "Surfaced" means
+
+Surfaced is the date a version first showed up on the tracker: its Leak Date, or its OG File Leak Date when it has no Leak Date. It can be a full leak, a snippet, or just a title seen in a teaser. It isn't always when the full song leaked.
+
+### Title clue
+
+After 5 wrong guesses the board adds a clue about the title: the first letter and how many words it has.
+
+## Versions
+
+A song can have several versions in a tracker, tagged like `Song [V1]`, `Song [V2]` and `Song [V3]`. They are one song to Trackerdle.
+
+- **Winning.** Guessing any version of the mystery song wins.
+- **Which version you guess.** Pick one from the suggestions, such as `Song [V2]`, or type it. A guess without a tag is the song's newest version. A song with only one version has nothing to pick.
+- **Hints about the version you guessed.** Era, Surfaced and Length use the version you named, and compare it with the closest version of the mystery song. The guess shows its version, like `Mar 2021 · V2`. When the song's other versions are in other eras, the Era hint adds `(+1 era)` so you know they are elsewhere.
+- **Hints about the whole song.** Credits, Type and Available look at the whole song: every version's producers and features, the newest version's type and the best version's availability.
+- **Untagged rows are their own song.** A row with no version tag is never merged into a tagged song with the same name. Different songs with the same name are told apart in the suggestions by their era, an alternate title or a producer, like `Blue · New Shoes`.
+
+## Unlimited mode
+
+Once you finish today's board for a tracker, win or lose, you can keep playing random songs from it.
+
+- Press **Play another** on the finished board, or run `/trackerdle play` with `mode` set to Unlimited. Unlimited needs today's song for that tracker finished first.
+- The song is a random one from the same pool as the daily. It is never today's answer, and it avoids your last few Unlimited songs.
+- Boards work the same: private, 8 guesses, the same hints. `/trackerdle guess` goes to your Unlimited board once you have finished today's song and an Unlimited board is in progress.
+- You have one Unlimited board per tracker at a time. If you start a new one while the old one has guesses but isn't finished, the old one counts as a loss.
+- Unlimited never changes your streak, daily stats or the leaderboard. It has its own section in `/trackerdle stats`: played, wins, win rate and average guesses per win.
+- **Share** works too. The grid says Unlimited and has no day, so it can't be mistaken for the daily.
+
+## Stats, streaks and the leaderboard
+
+- `/trackerdle stats` shows, per tracker, games played, win rate, your current and best streak, and how many wins took each number of guesses. Leave `tracker` blank to see every tracker you've played.
+- Your streak counts days in a row with a win. A missed day or a loss ends it.
+- A daily board you start and don't finish counts as a loss once the day is over.
+- `/trackerdle leaderboard` ranks everyone who has played in the server: most wins first, then the fewest guesses per win. It has 10 players per page, and `tracker` narrows it to one tracker.
+- `/trackerdle history` lists your past boards. With a `tracker` it lists every past day's answer, played or not. Open a day to see its board.
+
+## Sharing
+
+When a board is finished, **Share** posts a spoiler-free result in the channel: the tracker, the day, your score and a grid of squares, with no song names. It is posted as its own message.

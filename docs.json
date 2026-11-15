@@ -32,7 +32,8 @@
           {
             "group": "Server features",
             "pages": [
-              "features/community-tools"
+              "features/community-tools",
+              "features/trackerdle"
             ]
           },
           {
