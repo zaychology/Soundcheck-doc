@@ -14,34 +14,34 @@ Soundcheck has 178 commands and subcommands. Use them as slash commands, or by m
 | Command | What it does | Options | Needs |
 | --- | --- | --- | --- |
 | `/artist` | Configure the default artist for this server, or your own | — | — |
-| `/artist config` | View the currently configured artist for this server | — | Premium · Server only |
+| `/artist config` | ⭐ View the currently configured artist for this server | — | Premium · Server only |
 | `/artist era` | View and manage era information for this server's configured artist | `name (optional)` | Manage Server · Server only |
 | `/artist era add` | Add a new era to this server's artist | `artist (optional)` | Manage Server · Server only |
 | `/artist era delete` | Delete an era permanently | `name`, `artist (optional)` | Manage Server · Server only |
 | `/artist era edit` | Edit an existing era | `name`, `artist (optional)` | Manage Server · Server only |
 | `/artist era reorder` | Move an era to a different position in the list | `name`, `position`, `artist (optional)` | Manage Server · Server only |
-| `/artist list` | View all available artists | — | Premium · Server only |
-| `/artist mine` | Set your own default artist for /tracker, /snippets and /compilation (any server or DMs) | `artist (optional)` | Premium |
-| `/artist reset` | Remove the custom artist configuration for this server | — | Premium · Manage Server · Server only |
-| `/artist set` | Set the default artist for this server | `artist` | Premium · Manage Server · Server only |
-| `/compilation` | Search an artist's compilation, or get its link | `artist (optional)`, `keyword (optional)` | — |
+| `/artist list` | ⭐ View all available artists | — | Premium · Server only |
+| `/artist mine` | ⭐ Set your own default artist for /tracker, /snippets and /compilation (any server or DMs) | `artist (optional)` | Premium |
+| `/artist reset` | ⭐ Remove the custom artist configuration for this server | — | Premium · Manage Server · Server only |
+| `/artist set` | ⭐ Set the default artist for this server | `artist` | Premium · Manage Server · Server only |
+| `/compilation` | ⭐ Search an artist's compilation, or get its link | `artist (optional)`, `keyword (optional)` | — |
 | `/leakedcx` | Configure the feed settings for LEAKED.CX in the server | — | Administrator · Server only |
 | `/leakedcx add` | Set up a LEAKED.CX feed in a channel | `channel`, `feed` | Administrator |
 | `/leakedcx remove` | Remove a LEAKED.CX feed from a channel | `channel`, `feed (optional)` | Administrator |
 | `/leakedcx status` | View current LEAKED.CX feed configuration | — | Administrator |
-| `/onthisday` | Post what happened on this day in your tracker to a channel every day | — | Premium · Administrator · Server only |
-| `/onthisday config` | View the daily On This Day setup | — | Premium · Administrator · Server only |
-| `/onthisday remove` | Stop the daily On This Day post | — | Premium · Administrator · Server only |
-| `/onthisday run` | Post today's On This Day in this server now | — | Premium · Manage Server · Server only |
-| `/onthisday set` | Set the channel (and an optional role to ping) for the daily On This Day post | `channel`, `role (optional)` | Premium · Administrator · Server only |
+| `/onthisday` | ⭐ Post what happened on this day in your tracker to a channel every day | — | Premium · Administrator · Server only |
+| `/onthisday config` | ⭐ View the daily On This Day setup | — | Premium · Administrator · Server only |
+| `/onthisday remove` | ⭐ Stop the daily On This Day post | — | Premium · Administrator · Server only |
+| `/onthisday run` | ⭐ Post today's On This Day in this server now | — | Premium · Manage Server · Server only |
+| `/onthisday set` | ⭐ Set the channel (and an optional role to ping) for the daily On This Day post | `channel`, `role (optional)` | Premium · Administrator · Server only |
 | `/refreshsnippets` | Refresh an artist's snippet cache | `artist (optional)` | Manage Messages · Server only |
 | `/snippets` | Search for an artist's snippets | `artist (optional)`, `name (optional)` | — |
-| `/songoftheday` | Configure or run the Song of the Day | — | Premium · Administrator · Server only |
-| `/songoftheday config` | View the current Song of the Day configuration | — | Premium · Administrator · Server only |
-| `/songoftheday remove` | Remove the Song of the Day configuration for this server | — | Premium · Administrator · Server only |
-| `/songoftheday run` | Post the Song of the Day for this server now | — | Premium · Manage Server · Server only |
-| `/songoftheday set` | Set the Song of the Day channel and role for this server | `channel`, `role (optional)` | Premium · Administrator · Server only |
-| `/surface` | Surface a track from the server's default artist | `name`, `link`, `count`, `surface_type`, `artist (optional)`, `producers (optional)`, `altnames (optional)`, `era (optional)`, `ogfile (optional)`, `notes (optional)`, `alternate_link (optional)`, `message (optional)` | Premium · Manage Messages · Server only |
+| `/songoftheday` | ⭐ Configure or run the Song of the Day | — | Premium · Administrator · Server only |
+| `/songoftheday config` | ⭐ View the current Song of the Day configuration | — | Premium · Administrator · Server only |
+| `/songoftheday remove` | ⭐ Remove the Song of the Day configuration for this server | — | Premium · Administrator · Server only |
+| `/songoftheday run` | ⭐ Post the Song of the Day for this server now | — | Premium · Manage Server · Server only |
+| `/songoftheday set` | ⭐ Set the Song of the Day channel and role for this server | `channel`, `role (optional)` | Premium · Administrator · Server only |
+| `/surface` | ⭐ Surface a track from the server's default artist | `name`, `link`, `count`, `surface_type`, `artist (optional)`, `producers (optional)`, `altnames (optional)`, `era (optional)`, `ogfile (optional)`, `notes (optional)`, `alternate_link (optional)`, `message (optional)` | Premium · Manage Messages · Server only |
 | `/tracker` | Search an artist's Google Sheets tracker | — | — |
 | `/tracker albumcopies` | Search for album copies from an artist's tracker | `tracker (optional)`, `keyword (optional)` | — |
 | `/tracker art` | Search for cover art from an artist's tracker | `tracker (optional)`, `keyword (optional)` | — |
@@ -80,9 +80,9 @@ Soundcheck has 178 commands and subcommands. Use them as slash commands, or by m
 | `/cmd list` | View disabled commands in a channel | `channel (optional)` | Manage Server · Server only |
 | `/cmd member` | Disable a command for a member | `member`, `command` | Manage Server · Server only |
 | `/customize` | Customize the bot's profile in this server | — | Premium · Administrator · Server only |
-| `/customize avatar` | Customize the bot's server avatar | `url (optional)`, `attachment (optional)` | Premium · Administrator · Server only |
-| `/customize banner` | Customize the bot's server banner | `url (optional)`, `attachment (optional)` | Premium · Administrator · Server only |
-| `/customize bio` | Customize the bot's server bio | `text` | Premium · Administrator · Server only |
+| `/customize avatar` | ⭐ Customize the bot's server avatar | `url (optional)`, `attachment (optional)` | Premium · Administrator · Server only |
+| `/customize banner` | ⭐ Customize the bot's server banner | `url (optional)`, `attachment (optional)` | Premium · Administrator · Server only |
+| `/customize bio` | ⭐ Customize the bot's server bio | `text` | Premium · Administrator · Server only |
 | `/customize reset` | Reset the bot's server profile back to its defaults | `field (optional)` | Manage Server · Server only |
 | `/module` | Choose where modules can be used | — | Manage Server · Server only |
 | `/module channel` | Disable a module in a channel | `channel`, `module` | Manage Server · Server only |
