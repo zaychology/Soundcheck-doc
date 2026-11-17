@@ -15,6 +15,7 @@ Updates to Soundcheck, newest first. Ask about any of them in the [support serve
 
 ### Changed
 
+- `/tracker` song cards and Song of the Day show the era in bold with its years when the tracker has no saved era list, for example "**2 Alivë** (2021 - 2022)", read from the era's timeline in the sheet ("(2020)" for a single year, just the name when the sheet gives no years). Eras saved with `/artist era` still come first.
 - `/tracker`, `/lastfm`, `/genius`, `/download`, `/media`, `/spotify`, `/soundcloud`, `/youtube`, `/x`, `/tiktok`, `/snippets` and other slow commands show a note saying what they're doing ("Asking Last.fm…", "Downloading…", "Loading the Yeat Tracker…") when the answer takes more than 4 seconds, and the answer replaces it. A command that takes far too long now says "taking too long, try again in a minute" instead of never answering (1 minute for Last.fm, Genius and other outside services, 3 minutes for trackers, 5 minutes for downloads and audio tools, 2 minutes otherwise). A tracker that was still loading keeps loading, so trying again is quick.
 - `/download` of a SoundCloud link, `/soundcloud`, `/spotify`, `/lastfm` info cards and Songlink replies answer faster when the same link or lookup was asked for recently (SoundCloud 10 minutes, Spotify and Songlink 1 hour, Last.fm 1 to 10 minutes). Now playing and recent tracks are always live.
 - `/help`, `/tracker`, `/trackerdle`, `/snippets`, `/download`, `/youtube`, `/spotify`, `/soundcloud`, `/genius`, `/grail`, games and every other command with buttons or menus answer someone who presses another person's buttons with the same private card: "Only @name can use this. Run the command yourself to get your own." Other private notes (a disabled command, a full Connect Four column, a file that couldn't be sent) are cards now too instead of plain text.
@@ -23,6 +24,7 @@ Updates to Soundcheck, newest first. Ask about any of them in the [support serve
 
 - `/compilation` now says when an artist's Filen folder can't be reached (for example after its password changed) instead of saying the index is still loading. The link card notes that the link or password may be out of date, and the bot tries the folder again every 30 minutes until it works.
 - `/trackerdle` daily songs no longer repeat a recent answer: a tracker's song is never one of its answers from the last 3/4 of its pool in days, up to a year (a 20-song pool goes 15 days).
+- `/tracker`, `/trackerdle`, `/tracker stats`, `/tracker onthisday` and Song of the Day skip tracker rows with an empty song name, and rows with an empty era when the sheet has an Era column (blank template rows, notes, banners). They no longer show up as songs or count in totals.
 
 </Update>
 
