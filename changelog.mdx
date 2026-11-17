@@ -10,14 +10,17 @@ Updates to Soundcheck, newest first. Ask about any of them in the [support serve
 
 ### New features
 
+- `/artist era reset` deletes every saved era of the server's artist in one go, after an "are you sure" step that says how many eras will go. Tracker cards then use the sheet's own era names and colours. Needs Manage Server in the artist's own server, like the other era commands.
 - `/trackerdle` shows how long a finished board took ("Time · 2m 14s"), adds it to the Share grid, and `/trackerdle stats` shows your fastest win and average win time for daily and Unlimited. Games played before this have no time.
 
 ### Changed
 
+- `/tracker`, `/lastfm`, `/genius`, `/download`, `/media`, `/spotify`, `/soundcloud`, `/youtube`, `/x`, `/tiktok`, `/snippets` and other slow commands show a note saying what they're doing ("Asking Last.fm…", "Downloading…", "Loading the Yeat Tracker…") when the answer takes more than 4 seconds, and the answer replaces it. A command that takes far too long now says "taking too long, try again in a minute" instead of never answering (1 minute for Last.fm, Genius and other outside services, 3 minutes for trackers, 5 minutes for downloads and audio tools, 2 minutes otherwise). A tracker that was still loading keeps loading, so trying again is quick.
 - `/download` of a SoundCloud link, `/soundcloud`, `/spotify`, `/lastfm` info cards and Songlink replies answer faster when the same link or lookup was asked for recently (SoundCloud 10 minutes, Spotify and Songlink 1 hour, Last.fm 1 to 10 minutes). Now playing and recent tracks are always live.
 
 ### Fixes
 
+- `/compilation` now says when an artist's Filen folder can't be reached (for example after its password changed) instead of saying the index is still loading. The link card notes that the link or password may be out of date, and the bot tries the folder again every 30 minutes until it works.
 - `/trackerdle` daily songs no longer repeat a recent answer: a tracker's song is never one of its answers from the last 3/4 of its pool in days, up to a year (a 20-song pool goes 15 days).
 
 </Update>
