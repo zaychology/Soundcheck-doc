@@ -16,6 +16,10 @@ Your board is private, so only you see it. Boards are played with slash commands
 
 The mystery song is picked from the tracker's notable songs: names with an emoji in front, or songs listed in its Best Of or Grails tab. A tracker with fewer than 20 of those uses every named Unreleased song instead. Placeholder names like "???" or "Untitled" are never picked.
 
+A tracker's daily song never repeats one of its recent answers. The wait is three quarters of the pool in days, up to a year: a pool of 20 songs goes 15 days, a big one up to 365.
+
+Finished boards show how long they took ("Time · 2m 14s", from your first open to your last guess), and Share adds it to the grid. Boards played before timing was added show no time.
+
 ## The hints
 
 Every guess is compared with the mystery song on up to six hints.
@@ -61,12 +65,12 @@ Once you finish today's board for a tracker, win or lose, you can keep playing r
 - The song is a random one from the same pool as the daily. It is never today's answer, and it avoids your last few Unlimited songs.
 - Boards work the same: private, 8 guesses, the same hints. `/trackerdle guess` goes to your Unlimited board once you have finished today's song and an Unlimited board is in progress.
 - You have one Unlimited board per tracker at a time. If you start a new one while the old one has guesses but isn't finished, the old one counts as a loss.
-- Unlimited never changes your streak, daily stats or the leaderboard. It has its own section in `/trackerdle stats`: played, wins, win rate and average guesses per win.
+- Unlimited never changes your streak, daily stats or the leaderboard. It has its own section in `/trackerdle stats`: played, wins, win rate, average guesses per win, fastest win and average win time.
 - **Share** works too. The grid says Unlimited and has no day, so it can't be mistaken for the daily.
 
 ## Stats, streaks and the leaderboard
 
-- `/trackerdle stats` shows, per tracker, games played, win rate, your current and best streak, and how many wins took each number of guesses. Leave `tracker` blank to see every tracker you've played.
+- `/trackerdle stats` shows, per tracker, games played, win rate, your current and best streak, and how many wins took each number of guesses, plus your fastest win and average win time. Leave `tracker` blank to see every tracker you've played.
 - Your streak counts days in a row with a win. A missed day or a loss ends it.
 - A daily board you start and don't finish counts as a loss once the day is over.
 - `/trackerdle leaderboard` ranks everyone who has played in the server: most wins first, then the fewest guesses per win. It has 10 players per page, and `tracker` narrows it to one tracker.
