@@ -25,6 +25,7 @@ Updates to Soundcheck, newest first. Ask about any of them in the [support serve
 - `/compilation` now says when an artist's Filen folder can't be reached (for example after its password changed) instead of saying the index is still loading. The link card notes that the link or password may be out of date, and the bot tries the folder again every 30 minutes until it works.
 - `/trackerdle` daily songs no longer repeat a recent answer: a tracker's song is never one of its answers from the last 3/4 of its pool in days, up to a year (a 20-song pool goes 15 days).
 - `/tracker`, `/trackerdle`, `/tracker stats`, `/tracker onthisday` and Song of the Day skip tracker rows with an empty song name, and rows with an empty era when the sheet has an Era column (blank template rows, notes, banners). They no longer show up as songs or count in totals.
+- `/tracker` song cards show every link of a cell that holds several hyperlinked lines ("Snippet", "Snippet 2"), instead of the first link repeated. Text without a link in a links column ("LINK NEEDED", "TBA", "?") is no longer shown as a broken link.
 
 </Update>
 
