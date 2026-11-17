@@ -19,6 +19,7 @@ Updates to Soundcheck, newest first. Ask about any of them in the [support serve
 - `/tracker`, `/lastfm`, `/genius`, `/download`, `/media`, `/spotify`, `/soundcloud`, `/youtube`, `/x`, `/tiktok`, `/snippets` and other slow commands show a note saying what they're doing ("Asking Last.fm…", "Downloading…", "Loading the Yeat Tracker…") when the answer takes more than 4 seconds, and the answer replaces it. A command that takes far too long now says "taking too long, try again in a minute" instead of never answering (1 minute for Last.fm, Genius and other outside services, 3 minutes for trackers, 5 minutes for downloads and audio tools, 2 minutes otherwise). A tracker that was still loading keeps loading, so trying again is quick.
 - `/download` of a SoundCloud link, `/soundcloud`, `/spotify`, `/lastfm` info cards and Songlink replies answer faster when the same link or lookup was asked for recently (SoundCloud 10 minutes, Spotify and Songlink 1 hour, Last.fm 1 to 10 minutes). Now playing and recent tracks are always live.
 - `/help`, `/tracker`, `/trackerdle`, `/snippets`, `/download`, `/youtube`, `/spotify`, `/soundcloud`, `/genius`, `/grail`, games and every other command with buttons or menus answer someone who presses another person's buttons with the same private card: "Only @name can use this. Run the command yourself to get your own." Other private notes (a disabled command, a full Connect Four column, a file that couldn't be sent) are cards now too instead of plain text.
+- `/tracker` song cards show pictures from the links column in the card's gallery too, next to videos and in the same order: direct picture links (.jpg, .png, .gif, .webp), imgur.gg picture pages and Pillowcase picture files.
 
 ### Fixes
 
@@ -26,6 +27,7 @@ Updates to Soundcheck, newest first. Ask about any of them in the [support serve
 - `/trackerdle` daily songs no longer repeat a recent answer: a tracker's song is never one of its answers from the last 3/4 of its pool in days, up to a year (a 20-song pool goes 15 days).
 - `/tracker`, `/trackerdle`, `/tracker stats`, `/tracker onthisday` and Song of the Day skip tracker rows with an empty song name, and rows with an empty era when the sheet has an Era column (blank template rows, notes, banners). They no longer show up as songs or count in totals.
 - `/tracker` song cards show every link of a cell that holds several hyperlinked lines ("Snippet", "Snippet 2"), instead of the first link repeated. Text without a link in a links column ("LINK NEEDED", "TBA", "?") is no longer shown as a broken link.
+- `/tracker` song cards name a link with no readable page title after its site ("SoundCloud", "Pillowcase") or its address ("i.imgur.gg"), instead of error text like "I (Unavailable)" or "HTTP_403".
 
 </Update>
 
