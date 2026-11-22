@@ -32,6 +32,7 @@
           {
             "group": "Server features",
             "pages": [
+              "features/music",
               "features/community-tools",
               "features/trackerdle"
             ]
@@ -77,7 +78,7 @@
     "primary": {
       "type": "button",
       "label": "Add to Discord",
-      "href": "https://discord.com/oauth2/authorize?client_id=1462885866144923658&permissions=4504014092094657&scope=bot+applications.commands"
+      "href": "https://discord.com/oauth2/authorize?client_id=1462885866144923658&permissions=4504014095240385&scope=bot+applications.commands"
     }
   },
   "footer": {

@@ -1,0 +1,41 @@
+---
+title: "Music"
+description: "Play songs in your voice channel with /play."
+---
+
+Soundcheck plays music in voice channels. Music is a [Premium](/administration/premium) feature.
+
+## Playing a song
+
+1. Join a voice channel.
+2. Run `/play` with one of these:
+   - **A song name.** Soundcheck searches SoundCloud and plays the best match.
+   - **A SoundCloud link** to a song.
+   - **A direct link to an audio file** (MP3, M4A, FLAC, WAV, OGG and similar, up to 100 MB).
+3. Soundcheck joins your channel and posts a now-playing card with **Pause**, **Skip**, **Stop** and **Queue** buttons. Anyone in the channel can use them.
+
+Run `/play` again while a song is playing to add to the queue (up to 100 songs, each up to 3 hours).
+
+YouTube, Spotify and Apple Music links can't be played yet. Use the song's name instead and Soundcheck finds it on SoundCloud. SoundCloud Go+ songs only have a 30-second preview, so they're left out of searches.
+
+## Commands
+
+| Command | What it does |
+| --- | --- |
+| `/play` | Plays a song, or adds it to the queue |
+| `/music nowplaying` | Shows the song that's playing, with the player buttons |
+| `/music queue` | Shows the songs up next |
+| `/music skip` | Skips to the next song |
+| `/music pause` | Pauses the music |
+| `/music resume` | Carries on after a pause |
+| `/music stop` | Stops the music, clears the queue and leaves |
+
+Skip, pause, resume and stop work for members in the same voice channel as Soundcheck.
+
+## Leaving
+
+Soundcheck leaves after 3 minutes with nothing playing, or 2 minutes alone in the channel. If Soundcheck restarts, it comes back and carries on with the same queue.
+
+## Permissions
+
+Soundcheck needs **Connect** and **Speak** in the voice channel. If it joined your server before music was added, give its role those permissions or invite it again. See [Permissions and setup](/getting-started/permissions).
