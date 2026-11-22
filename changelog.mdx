@@ -11,7 +11,7 @@ Updates to Soundcheck, newest first. Ask about any of them in the [support serve
 ### New features
 
 - `/play` (premium): plays a song in your voice channel. Type a song name to search SoundCloud, or paste a SoundCloud link or a direct link to an audio file. A now-playing card shows the song and a progress bar, with player buttons for everyone in the channel: previous, play/pause, next, stop and Queue.
-- `/music nowplaying`, `/music queue`, `/music previous` (back to the start of the song, or to the song before in its first 5 seconds), `/music skip`, `/music pause`, `/music resume` and `/music stop` (premium) control the music. The bot leaves after 3 minutes with nothing playing, or 2 minutes alone in the channel.
+- `/music nowplaying`, `/music queue`, `/music previous` (back to the start of the song, or to the song before in its first 5 seconds), `/music skip`, `/music pause`, `/music resume` and `/music stop` (premium) control the music. The bot leaves after 3 minutes with nothing playing, or 30 seconds after everyone leaves the channel.
 - `/play` has a `file` option: upload an audio or video file (up to 100 MB) to play it. Attaching a file to `@Soundcheck play` works too.
 - `/play` has a `tracker` option: pick a tracker and its songs are suggested as you type, then the song plays from its link in the sheet (when several songs or versions can play, pick the one from a menu that lists only those) (Pillowcase, imgur.gg, pixeldrain, Google Drive or SoundCloud). Its card shows the era, the era's picture and colour, and links back to the song in the tracker. Pasting one of those links into `/play` works too.
 - `/tracker search` and the other tracker song cards have a Play button that queues the song in your voice channel (premium), when one of its links can be played.
@@ -25,6 +25,7 @@ Updates to Soundcheck, newest first. Ask about any of them in the [support serve
 ### Fixes
 
 - `/trackerdle guess`: a very long typed song that isn't in the tracker now gets the "isn't a song" note (shortened) instead of an error.
+- Pressing a button, picking from a menu or turning a page no longer pings the person named on the card. Any message the bot updates now stays silent, like the first reply.
 
 </Update>
 
